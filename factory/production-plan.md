@@ -1,6 +1,6 @@
 # Production plan
 
-Status: draft, not approved. Every slice follows these steps, in order.
+Status: approved. Every slice follows these steps, in order.
 
 ## Roles
 

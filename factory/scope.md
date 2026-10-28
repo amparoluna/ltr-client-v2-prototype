@@ -1,6 +1,6 @@
 # Scope
 
-Status: draft, not approved.
+Status: approved.
 
 ## Mission
 

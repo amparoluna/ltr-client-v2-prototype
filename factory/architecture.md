@@ -1,6 +1,6 @@
 # Architecture
 
-Status: draft, not approved. The parts of the app and the paths between them. A slice that needs a new part, or a new path, adds it here before the code that uses it.
+Status: approved. The parts of the app and the paths between them. A slice that needs a new part, or a new path, adds it here before the code that uses it.
 
 ## Parts
 
