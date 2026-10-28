@@ -4,32 +4,28 @@ Status: draft, not approved.
 
 ## Mission
 
-Show engineers, product, and leadership how a small agentic factory produces a working LTR V2 client prototype. The prototype is the evidence; the factory is the subject. The first showing is a local demo, a few days out.
+Show engineers, product, and leadership a small factory producing a working LTR V2 client prototype. The prototype is the evidence. The first showing is a local demo.
 
-## The product
+## Product
 
-A property-manager web app, rebuilt from scratch in this repository. The dev-hub prototype at `dev-hub/apps/ltr-v2-client-prototype` is reference only: screens, copy, and seed data can be mined from it, and no code is imported from it.
+A property-manager web app, rebuilt in this repository. Saved data lives in a database and survives a restart.
 
-Data survives a browser session and a server restart because it lives in a database.
+`dev-hub/apps/ltr-v2-client-prototype` is reference only. Copy its screens, copy, and seed data. Do not import its code.
 
 ## Users
 
-No passwords. A user picker selects who is acting, and every write is saved under that user.
+A user picker, no passwords. Every write is stored under the selected user.
 
-| Seeded user | Role | Properties |
+| Seed | Role | Can edit |
 | --- | --- | --- |
-| One Org admin | Org admin | All properties, including ones added later |
-| One Property manager admin | Property manager admin | An assigned list |
+| One Org admin | Org admin | Every settings screen, including policy. Every property, including ones added later |
+| One Property manager admin | Property manager admin | Assigned properties, and groups assigned directly |
 
-The Org admin edits every settings screen, including every policy.
+The Property manager admin can see General, Integrations, Users, Billing, and Policy management, and cannot edit them. Policy fields are read-only on every screen. A group that only contains one of their properties is not theirs to edit.
 
-The Property manager admin edits only the properties assigned to them, and only the groups assigned to them directly. A group that merely contains one of their properties is not theirs to edit.
+## Slices
 
-These screens are read-only for the Property manager admin: General, Integrations, Users, Billing, and Policy management. Policy fields are read-only for them on every screen.
-
-## In scope
-
-Each item is one slice. Until the GitHub issues exist, Status is the local stand-in. After Publish in the production plan, the project board is the status other people see, and this table keeps the issue number instead.
+One row is one slice. Until the GitHub issues exist, Status is local. After Publish, the project board is the status, and this table keeps the issue number.
 
 | # | Screen | Data | Status | Issue |
 | --- | --- | --- | --- | --- |
@@ -43,21 +39,14 @@ Each item is one slice. Until the GitHub issues exist, Status is the local stand
 | 7 | Settings · Billing & payment | Database | planned | |
 | 8 | People & animals | JSON file, read-only | planned | |
 
-Integrations stores connection records only. It never calls Yardi or Entrata. Billing stores plan, payment-method, and invoice records only. It never charges anything.
+Integrations stores connection records only. Billing stores the plan, the payment method, and the invoices only.
 
 ## Placeholders
 
-Dashboard, Open items, and Account appear in the navigation and open an empty page that says so. They get JSON data after the settings flows are done.
+Dashboard, Open items, and Account are empty pages in the navigation. They get JSON data after the settings slices.
 
 ## Out of scope
 
-- Deployment, dev-hub, and any hosted environment
-- Real authentication
-- Real PMS integration and real payments
+- Deployment
+- Real login, real property-management calls, and real payments
 - Writes to People & animals
-
-## Decided
-
-- Org-wide screens are read-only for the Property manager admin, not hidden.
-- A group is editable only when it is assigned to that user directly.
-- Only the Org admin can change policy: templates, locks, custom rules, and a property's policy fields.

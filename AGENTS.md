@@ -4,7 +4,7 @@ This repository is a small software factory and the LTR V2 client prototype it p
 
 Read these before any change:
 
-1. [factory/scope.md](factory/scope.md) — what the prototype includes, and each slice's status
+1. [factory/scope.md](factory/scope.md) — what the prototype includes, in slice order
 2. [factory/architecture.md](factory/architecture.md) — the pieces and how they connect
 3. [factory/production-plan.md](factory/production-plan.md) — the steps for building one slice
 
