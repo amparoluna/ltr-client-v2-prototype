@@ -45,3 +45,11 @@ Dwight Schrute, Pam Beesly, and Kevin Malone may switch users and open every pag
 4. Impersonate Pam Beesly and continue. The sidebar shows Pam Beesly, PB, and Property Manager · Clear Creek Meadows, Metro Lofts — Austin. The banner says Viewing as Pam Beesly and Signed in as Dwight Schrute. Reload. Pam Beesly is still selected.
 5. Impersonate Kevin Malone and continue. The sidebar shows Kevin Malone, KM, and Property Manager · Renaissance Terrace. Exit impersonation. The sidebar shows Dwight Schrute and Org Admin again, and the banner is gone.
 6. Restart the API. `GET /api/users` as Dwight still returns the three seeded users.
+
+## Result
+
+The suite passed. Dwight, Pam, and Kevin can read the user list. `X-User-Id: samantha` and a missing header return 401. After an API restart, `GET /api/users` as Dwight still returns the three seeded users. In the browser, the app opens as Dwight Schrute, Org Admin, with no viewing banner. Each navigation page is an empty page titled with its name. Switching to Pam or Kevin updates the sidebar and banner, and the choice stays after a reload. Exit impersonation returns to Dwight.
+
+## Promote
+
+nothing to promote. This slice never used `people.json`, or the rule that a seam other than an API route needs approval in the note.

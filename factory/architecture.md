@@ -36,9 +36,7 @@ SQLite needs no separate database service. Drizzle keeps a later move to Postgre
 - Vitest, run from `app/`. Each slice adds API tests for what it saves and for who is refused.
 - Reference only: `dev-hub/apps/ltr-v2-client-prototype`. Copy from it. Do not import from it. Do not branch, commit, or edit that repository.
 
-## Open until slice 0
+## Slice 0
 
-- Which SQLite driver installs on Node 26.
-- Which HTTP framework the API server uses.
-
-Slice 0 records both choices here.
+- SQLite driver: Node's built-in `node:sqlite`, through Drizzle's `node-sqlite` driver. It is part of Node 26, so nothing extra is compiled.
+- HTTP framework: Hono, listening on Node's HTTP server.
