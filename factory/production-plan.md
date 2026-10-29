@@ -21,6 +21,7 @@ Opening an issue is one step. It is not done until all of these are done:
 - Write each issue number into the scope table.
 - Add each issue to [project 1](https://github.com/users/amparoluna/projects/1) with Status `Todo`.
 - The issue body is what the user can do. Add no comment, and do not apply `ready-for-agent`. Seams belong in the slice note.
+- Read every issue back. The title matches its scope row. The body describes that same row. The blocked-by links match the approved edges. Stop if any of those disagree.
 
 Those actions apply to any issue opened later. A slice added after Publish gets its blocking links, its row in the scope table, and a card on project 1 with Status `Todo` in that same step.
 
