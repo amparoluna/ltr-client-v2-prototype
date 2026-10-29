@@ -25,19 +25,24 @@ The Property manager admin can see General, Integrations, Users, Billing, and Po
 
 ## Slices
 
-One row is one slice. Until the GitHub issues exist, Status is local. After Publish, the project board is the status, and this table keeps the issue number.
+One row is one slice. The project board is the status. This table keeps the order and the issue number.
 
-| # | Screen | Data | Status | Issue |
-| --- | --- | --- | --- | --- |
-| 0 | App shell: navigation, user picker, placeholders, database, seed | Database | planned | |
-| 1 | Settings · Users | Database | planned | |
-| 2 | Settings · Properties | Database | planned | |
-| 3 | Settings · Policy management | Database | planned | |
-| 4 | Settings · Property groups | Database | planned | |
-| 5 | Settings · Integrations | Database | planned | |
-| 6 | Settings · General | Database | planned | |
-| 7 | Settings · Billing & payment | Database | planned | |
-| 8 | People & animals | JSON file, read-only | planned | |
+| # | Screen | Data | Issue |
+| --- | --- | --- | --- |
+| 0 | App shell | Database | #1 |
+| 1 | Settings · Users | Database | #2 |
+| 2 | Settings · Properties table | Database | #3 |
+| 3 | Settings · Add a property | Database | #4 |
+| 4 | Settings · Property policy detail | Database | #5 |
+| 5 | Settings · Locked policy items | Database | #6 |
+| 6 | Settings · Policy templates | Database | #7 |
+| 7 | Settings · Property policies | Database | #8 |
+| 8 | Settings · Property groups list | Database | #9 |
+| 9 | Settings · Property group changes | Database | #10 |
+| 10 | Settings · Integrations | Database | #11 |
+| 11 | Settings · General | Database | #12 |
+| 12 | Settings · Billing & payment | Database | #13 |
+| 13 | People & animals | JSON file, read-only | #14 |
 
 Integrations stores connection records only. Billing stores the plan, the payment method, and the invoices only.
 

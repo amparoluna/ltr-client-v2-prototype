@@ -11,10 +11,14 @@ Status: approved. Every slice follows these steps, in order.
 
 When the Driver approves [scope.md](scope.md), run `/to-tickets` on that file.
 
+Opening an issue is one step. It is not done until all of these are done:
+
 - Open one issue per slice on [amparoluna/ltr-client-v2-prototype](https://github.com/amparoluna/ltr-client-v2-prototype), blockers first, with GitHub's blocking links.
 - Write each issue number into the scope table.
 - Add each issue to [project 1](https://github.com/users/amparoluna/projects/1) with Status `Todo`.
 - The issue body is what the user can do. Add no comment, and do not apply `ready-for-agent`. Seams belong in the slice note.
+
+Those actions apply to any issue opened later. A slice added after Publish gets its blocking links, its row in the scope table, and a card on project 1 with Status `Todo` in that same step.
 
 The board is the status other people see: `Todo`, `In Progress`, `Done`. The scope table keeps the order and the issue number.
 
@@ -46,7 +50,7 @@ Issue comments are added at Pick, at Note, when the note changes after approval,
 
 Write the change into the slice file. Build and `/code-review` read that file. If an approval comment already exists, post the revised note as a new issue comment and leave the earlier comments. The board stays `In Progress`. The issue body stays as published. No code and no test for the revised seams until the Driver replies `approved` again.
 
-A new slice is not added to this file or this issue. Stop and ask.
+A new slice is not added to this file or this issue. Stop and ask. When the Driver says to add it, open its issue as in Publish: blocking links, the scope table, and project 1 with Status `Todo`.
 
 ## Slice 0
 
