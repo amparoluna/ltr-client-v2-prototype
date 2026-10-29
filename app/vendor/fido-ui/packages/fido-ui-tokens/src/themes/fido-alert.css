@@ -1,0 +1,124 @@
+/*
+ * FidoAlert product theme — overrides on top of fido-ui-theme.css (Primary default).
+ *
+ * Usage:
+ *   @import "@petscreeninginc/fido-ui/tokens/theme.css";
+ *   @import "@petscreeninginc/fido-ui/tokens/themes/fido-alert.css";
+ *   <html data-fido-ui-theme="fidoAlert">
+ */
+
+[data-fido-ui-theme='fidoAlert'] {
+  /* ------------------------------------------------------------------ */
+  /* Primitive palette overrides (Colors.Tokens)                         */
+  /* ------------------------------------------------------------------ */
+
+  /* Primary (red brand) */
+  --color-fido-ui-primary-50: #fef0f0;
+  --color-fido-ui-primary-100: #ffd8d1;
+  --color-fido-ui-primary-200: #febcb3;
+  --color-fido-ui-primary-300: #fe8c81;
+  --color-fido-ui-primary-400: #fa5c53;
+  --color-fido-ui-primary-500: #ee2f2c;
+  --color-fido-ui-primary-600: #db0e13;
+  --color-fido-ui-primary-700: #b50c10;
+  --color-fido-ui-primary-800: #88090c;
+  --color-fido-ui-primary-900: #590608;
+
+  /* Secondary (blue) */
+  --color-fido-ui-secondary-50: #f4f8ff;
+  --color-fido-ui-secondary-100: #ebf2fe;
+  --color-fido-ui-secondary-200: #d4e1fd;
+  --color-fido-ui-secondary-300: #b4ccfc;
+  --color-fido-ui-secondary-400: #83adfb;
+  --color-fido-ui-secondary-500: #4f83f9;
+  --color-fido-ui-secondary-600: #2454f8;
+  --color-fido-ui-secondary-700: #183aed;
+  --color-fido-ui-secondary-800: #132ad6;
+  --color-fido-ui-secondary-900: #1623a8;
+
+  /* Destruct (red scale) */
+  --color-fido-ui-destruct-50: #fde6e4;
+  --color-fido-ui-destruct-100: #fad4cb;
+  --color-fido-ui-destruct-200: #f8b8a8;
+  --color-fido-ui-destruct-300: #f59584;
+  --color-fido-ui-destruct-400: #f38070;
+  --color-fido-ui-destruct-500: #eb5640;
+  --color-fido-ui-destruct-600: #de3b23;
+  --color-fido-ui-destruct-700: #b83213;
+  --color-fido-ui-destruct-800: #8c2a09;
+  --color-fido-ui-destruct-900: #581904;
+  --color-fido-ui-destruct-950: #461302;
+
+  /* Warning (amber adjustments) */
+  --color-fido-ui-warning-50: #fff7ee;
+  --color-fido-ui-warning-100: #fde5b3;
+  --color-fido-ui-warning-200: #fed681;
+  --color-fido-ui-warning-300: #febf3f;
+  --color-fido-ui-warning-400: #fdb220;
+  --color-fido-ui-warning-500: #f39a04;
+  --color-fido-ui-warning-600: #d57e01;
+  --color-fido-ui-warning-700: #a76101;
+  --color-fido-ui-warning-800: #814701;
+  --color-fido-ui-warning-900: #643600;
+  --color-fido-ui-warning-950: #492700;
+
+  /* Alert mirrors destruct */
+  --color-fido-ui-alert-50: var(--color-fido-ui-destruct-50);
+  --color-fido-ui-alert-100: var(--color-fido-ui-destruct-100);
+  --color-fido-ui-alert-200: var(--color-fido-ui-destruct-200);
+  --color-fido-ui-alert-300: var(--color-fido-ui-destruct-300);
+  --color-fido-ui-alert-400: var(--color-fido-ui-destruct-400);
+  --color-fido-ui-alert-500: var(--color-fido-ui-destruct-500);
+  --color-fido-ui-alert-600: var(--color-fido-ui-destruct-600);
+  --color-fido-ui-alert-700: var(--color-fido-ui-destruct-700);
+  --color-fido-ui-alert-800: var(--color-fido-ui-destruct-800);
+  --color-fido-ui-alert-900: var(--color-fido-ui-destruct-900);
+  --color-fido-ui-alert-950: var(--color-fido-ui-destruct-950);
+
+  /* ------------------------------------------------------------------ */
+  /* Spacing — Gaps (FidoAlert roomier scale)                            */
+  /* ------------------------------------------------------------------ */
+  --spacing-fido-ui-2xs: 6px;
+  --spacing-fido-ui-2xs-tablet: 4px;
+  --spacing-fido-ui-2xs-mobile: 2px;
+
+  --spacing-fido-ui-xs: 8px;
+  --spacing-fido-ui-xs-tablet: 6px;
+  --spacing-fido-ui-xs-mobile: 4px;
+
+  --spacing-fido-ui-sm: 10px;
+  --spacing-fido-ui-sm-tablet: 10px;
+  --spacing-fido-ui-sm-mobile: 6px;
+
+  --spacing-fido-ui-md: 12px;
+  --spacing-fido-ui-md-tablet: 10px;
+  --spacing-fido-ui-md-mobile: 8px;
+
+  --spacing-fido-ui-lg: 14px;
+  --spacing-fido-ui-lg-tablet: 12px;
+  --spacing-fido-ui-lg-mobile: 10px;
+
+  --spacing-fido-ui-xl: 20px;
+  --spacing-fido-ui-xl-tablet: 16px;
+  --spacing-fido-ui-xl-mobile: 14px;
+
+  --spacing-fido-ui-2xl: 24px;
+  --spacing-fido-ui-2xl-tablet: 16px;
+  --spacing-fido-ui-2xl-mobile: 14px;
+
+  --spacing-fido-ui-3xl: 32px;
+  --spacing-fido-ui-3xl-tablet: 28px;
+  --spacing-fido-ui-3xl-mobile: 24px;
+
+  --spacing-fido-ui-5xl: 72px;
+  --spacing-fido-ui-5xl-tablet: 64px;
+  --spacing-fido-ui-5xl-mobile: 56px;
+
+  /* ------------------------------------------------------------------ */
+  /* Icon sizes                                                          */
+  /* ------------------------------------------------------------------ */
+  --size-fido-ui-md: 32px;
+  --size-fido-ui-md-tablet: 24px;
+  --size-fido-ui-md-mobile: 24px;
+
+}

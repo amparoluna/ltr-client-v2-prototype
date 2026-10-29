@@ -1,0 +1,12 @@
+export { ChartBarsIcon } from './chart-bars';
+export { ChartBarsBoldIcon } from './chart-bars-bold';
+export { ChartAltIcon } from './chart-alt';
+export { ChartAltBoldIcon } from './chart-alt-bold';
+export { GraphicBarsIcon } from './graphic-bars';
+export { GraphicBarsBoldIcon } from './graphic-bars-bold';
+export { NoTrendIcon } from './no-trend';
+export { TrendIcon } from './trend';
+export { ChartIcon } from './chart';
+export { ChartBoldIcon } from './chart-bold';
+export { ChartGraphIcon } from './chart-graph';
+export { ChartGraphBoldIcon } from './chart-graph-bold';

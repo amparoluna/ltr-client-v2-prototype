@@ -1,0 +1,12 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const ArrowUpLeftIcon = /* @__PURE__ */ createIcon(
+  'ArrowUpLeftIcon',
+  <>
+<g>
+<path d="M19.5 19.5L4.5 4.5L19.5 19.5ZM4.5 4.5V15.75V4.5ZM4.5 4.5H15.75H4.5Z" fill="currentColor"/>
+<path d="M3.59961 15.75V4.5C3.59961 4.00294 4.00294 3.59961 4.5 3.59961H15.75C16.2471 3.59961 16.6504 4.00294 16.6504 4.5C16.6504 4.99706 16.2471 5.40039 15.75 5.40039H6.67383L20.1367 18.8633C20.4882 19.2148 20.4882 19.7852 20.1367 20.1367C19.7852 20.4882 19.2148 20.4882 18.8633 20.1367L5.40039 6.67383V15.75C5.40039 16.2471 4.99706 16.6504 4.5 16.6504C4.00294 16.6504 3.59961 16.2471 3.59961 15.75Z" fill="currentColor"/>
+</g>
+  </>,
+);

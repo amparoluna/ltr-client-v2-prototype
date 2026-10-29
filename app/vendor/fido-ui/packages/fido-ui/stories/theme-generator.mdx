@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ThemeGenerator } from './components/ThemeGenerator';
+
+<Meta title="Getting Started/Theme Generator" />
+
+# Theme Generator
+
+Paste Figma Variables JSON (from the REST API or Dev Mode export) or simple token values to generate a CSS override file for your app.
+
+**Supported input formats:**
+
+1. **Figma Variables JSON** — the format returned by Figma's Variables REST API, with `variables`, `resolvedType`, and `valuesByMode`
+2. **Simple JSON** — key-value pairs like `{ "primary-500": "#8b5cf6" }`
+3. **CSS variables** — raw CSS like `--color-fido-ui-primary-500: #8b5cf6;`
+
+The generator maps Figma variable names (e.g., `primary/500`) to FidoUI CSS custom properties (e.g., `--color-fido-ui-primary-500`) and converts Figma RGBA floats to hex colors.
+
+<ThemeGenerator />

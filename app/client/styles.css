@@ -1,0 +1,219 @@
+@import "tailwindcss" source(none);
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@source ".";
+@source "../vendor/fido-ui/packages/fido-ui/dist";
+@source "../vendor/fido-ui/packages/fido-ui/dist/esm";
+@source "../vendor/fido-ui/packages/fido-ui/src/components/breadcrumb";
+
+:root {
+  font-family: var(--font-fido-ui-paragraph);
+  color: var(--color-fido-ui-neutral-900);
+  background: var(--color-fido-ui-neutral-50);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --app-line: var(--color-fido-ui-neutral-200);
+  --app-muted: var(--color-fido-ui-neutral-500);
+  --app-ink: var(--color-fido-ui-neutral-900);
+  --app-accent: var(--color-fido-ui-primary-600);
+  --app-accent-soft: var(--color-fido-ui-primary-100);
+  --app-surface: var(--color-fido-ui-neutral-white);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button, input { font: inherit; }
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-fido-ui-neutral-50);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  flex: none;
+  border-right: 1px solid var(--app-line);
+  background: var(--app-surface);
+  box-shadow: 2px 0 5px rgb(10 10 10 / 4%);
+}
+
+.brand {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  padding: 16px;
+}
+
+.brand-logo {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 12px;
+}
+
+.nav button,
+.user-trigger,
+.menu button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  color: var(--color-fido-ui-neutral-800);
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav button {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 12px;
+}
+
+.nav button[aria-current="page"],
+.nav button[aria-current="true"] {
+  background: var(--app-accent-soft);
+  font-weight: 600;
+}
+
+.nav button svg { color: var(--app-muted); flex: none; }
+
+.nav-back { font-weight: 650; }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 12px;
+  position: relative;
+}
+
+.user-trigger {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.user-trigger:hover,
+.nav button:hover,
+.menu button:hover { background: var(--color-fido-ui-neutral-50); }
+
+.user-avatar {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--app-accent-soft);
+  color: var(--color-fido-ui-primary-700);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.user-copy { display: flex; min-width: 0; flex-direction: column; }
+.user-copy strong { font-size: 14px; }
+.user-copy small { color: var(--app-muted); font-size: 12px; }
+
+.menu {
+  position: absolute;
+  right: 12px;
+  bottom: 72px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border: 1px solid var(--app-line);
+  border-radius: 12px;
+  background: var(--app-surface);
+  box-shadow: 0 8px 24px rgb(10 10 10 / 12%);
+}
+
+.menu button { height: 40px; padding: 0 10px; border-radius: 8px; }
+
+.main-column {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.impersonation-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 28px;
+  background: var(--color-fido-ui-warning-400);
+  color: var(--color-fido-ui-warning-900);
+}
+
+.impersonation-banner p { display: flex; flex-direction: column; gap: 2px; margin: 0; }
+.impersonation-banner button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.page {
+  flex: 1;
+  padding: 28px;
+}
+
+.page h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 650;
+}
+
+footer {
+  display: flex;
+  min-height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 28px;
+  border-top: 1px solid var(--app-line);
+  background: var(--app-surface);
+  color: var(--app-muted);
+  font-size: 12px;
+}
+
+footer div { display: flex; align-items: center; gap: 20px; }
+footer a { color: inherit; text-decoration: none; }
+footer .support-link {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--color-fido-ui-neutral-100);
+  color: var(--app-accent);
+}
+
+.user-list { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.user-list button, .user-list .current-user {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.user-list .current-user { cursor: default; }
+.pending-user { display: flex; align-items: center; gap: 12px; padding: 10px; }

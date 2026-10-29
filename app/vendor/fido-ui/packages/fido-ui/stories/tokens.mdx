@@ -1,0 +1,139 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as TokenStories from './tokens.stories';
+
+<Meta of={TokenStories} />
+
+# Design Tokens
+
+FidoUI uses CSS custom properties as design tokens, defined in `fido-ui-theme.css`. Values are synced from Figma. **Primary is the default theme** — no `data-fido-ui-theme` attribute (or `data-fido-ui-theme="primary"`) gets the base tokens as-is. **FidoAlert** layers brand overrides on top via `[data-fido-ui-theme='fidoAlert']`.
+
+Use the **Theme** toolbar above to switch between Primary and FidoAlert — the showcase below reads the live computed CSS variable values, so it always reflects exactly what's shipping for the selected theme.
+
+## Responsive tokens
+
+Canonical names (e.g. `--spacing-fido-ui-md`, `--radius-fido-ui-lg`) use **Desktop** values. Tablet and mobile are available as suffixed variables:
+
+- `--spacing-fido-ui-md-tablet` / `--spacing-fido-ui-md-mobile`
+- Same pattern for `radius`, `size`, `font-size`, and block layout tokens.
+
+Suggested breakpoints when reading suffixed vars in custom CSS: tablet `max-width: 1023px`, mobile `max-width: 767px`.
+
+## Typography
+
+The typography scale comes straight from the Figma token file (`Font.Family` + `Font.Sizes`) and is the **only** size scale:
+
+- **Headings:** `text-fido-ui-h1` … `text-fido-ui-h5`
+- **Paragraphs:** `text-fido-ui-p1` … `text-fido-ui-p5`
+- **Families:** `font-fido-ui-heading`, `font-fido-ui-paragraph`, `font-fido-ui-label` (all Archivo today, but the roles are distinct variables so product themes can diverge later)
+
+There is no `xs`/`sm`/`md`/`base`/`lg`/`xl` text scale — the former legacy scale was removed in favor of the semantic H/P scale (`xs`→`p5`, `sm`→`p4`, `md`→`p3`, `base`→`p2`, `lg`/`xl`→`p1`).
+
+Canonical utilities use the **desktop** value. Tablet/mobile sizes ship as opt-in variables (`--font-size-fido-ui-h1-tablet`, `--font-size-fido-ui-p3-mobile`, …) — the library never applies them automatically; apply them in product CSS via the breakpoints above.
+
+Line-height tokens (`leading-fido-ui-tight` 1.25, `leading-fido-ui-normal` 1.4, `leading-fido-ui-relaxed` 1.6) are **FidoUI conventions**, not Figma-synced — the token file does not define line heights yet.
+
+## Product themes
+
+<table>
+  <thead>
+    <tr>
+      <th>Theme</th>
+      <th>CSS</th>
+      <th>Activation</th>
+      <th>What changes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Primary (default)</td>
+      <td><code>@petscreeninginc/fido-ui/tokens/theme.css</code></td>
+      <td>No attribute, or <code>data-fido-ui-theme="primary"</code></td>
+      <td>Base tokens — default spacing and palettes</td>
+    </tr>
+    <tr>
+      <td>FidoAlert</td>
+      <td>+ <code>@petscreeninginc/fido-ui/tokens/themes/fido-alert.css</code></td>
+      <td><code>data-fido-ui-theme="fidoAlert"</code> on <code>html</code> or app root</td>
+      <td>Roomier spacing plus the FidoAlert brand palette (red primary, blue secondary, etc.)</td>
+    </tr>
+  </tbody>
+</table>
+
+```css
+@import "tailwindcss";
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@import "@petscreeninginc/fido-ui/tokens/themes/fido-alert.css";
+```
+
+```html
+<html data-fido-ui-theme="fidoAlert">
+```
+
+See the **Theming & Customization** page for the full breakdown of product themes and token overrides.
+
+---
+
+## Overriding Tokens
+
+Override CSS custom properties to customize the theme:
+
+```css
+/* your-overrides.css — load AFTER fido-ui-theme.css */
+@theme {
+  --color-fido-ui-primary-500: #8b5cf6;
+  --color-fido-ui-primary-700: #6d28d9;
+}
+```
+
+## Accessing Tokens in JavaScript
+
+```ts
+import { colors } from '@petscreeninginc/fido-ui/tokens';
+
+console.log(colors.primary[500]); // Primary default value
+```
+
+`colors.ts` exports **primitive palettes only** (Primary values). Semantic colors, strokes, sizes, blocks, and responsive values are defined in `fido-ui-theme.css`; per-theme overrides live in `tokens/themes/*.css` and the registry at `src/tokens/themes.ts`.
+
+## Token groups in theme.css
+
+<table>
+  <thead>
+    <tr>
+      <th>Figma</th>
+      <th>CSS prefix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Colors.Tokens</td>
+      <td><code>--color-fido-ui-&#42;</code></td>
+    </tr>
+    <tr>
+      <td>Colors.Type / Utility / Illustration</td>
+      <td><code>--color-fido-ui-type-&#42;</code>, <code>utility-&#42;</code>, <code>illustration-&#42;</code></td>
+    </tr>
+    <tr>
+      <td>Spacing</td>
+      <td><code>--spacing-fido-ui-&#42;</code></td>
+    </tr>
+    <tr>
+      <td>Corners</td>
+      <td><code>--radius-fido-ui-&#42;</code></td>
+    </tr>
+    <tr>
+      <td>Strokes</td>
+      <td><code>--border-width-fido-ui-&#42;</code></td>
+    </tr>
+    <tr>
+      <td>Icon Sizes</td>
+      <td><code>--size-fido-ui-&#42;</code></td>
+    </tr>
+    <tr>
+      <td>Font.Sizes</td>
+      <td><code>--font-size-fido-ui-&#42;</code>, <code>--text-fido-ui-&#42;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<Story of={TokenStories.AllTokens} />

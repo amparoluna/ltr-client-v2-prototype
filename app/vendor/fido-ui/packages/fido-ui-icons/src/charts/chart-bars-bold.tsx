@@ -1,0 +1,15 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const ChartBarsBoldIcon = /* @__PURE__ */ createIcon(
+  'ChartBarsBoldIcon',
+  <>
+<g>
+<g>
+<path d="M2 14.4286C2 13.6396 2.55964 13 3.25 13H5.75C6.44036 13 7 13.6396 7 14.4286V21.5714C7 22.3604 6.44036 23 5.75 23H3.25C2.55964 23 2 22.3604 2 21.5714V14.4286Z" fill="currentColor"/>
+<path d="M9.5 8.71428C9.5 7.92531 10.0596 7.28571 10.75 7.28571H13.25C13.9404 7.28571 14.5 7.92531 14.5 8.71429V21.5714C14.5 22.3604 13.9404 23 13.25 23H10.75C10.0596 23 9.5 22.3604 9.5 21.5714V8.71428Z" fill="currentColor"/>
+<path d="M17 4.42857C17 3.63959 17.5596 3 18.25 3H20.75C21.4404 3 22 3.63959 22 4.42857V21.5714C22 22.3604 21.4404 23 20.75 23H18.25C17.5596 23 17 22.3604 17 21.5714V4.42857Z" fill="currentColor"/>
+</g>
+</g>
+  </>,
+);

@@ -1,0 +1,11 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const BookmarkIcon = /* @__PURE__ */ createIcon(
+  'BookmarkIcon',
+  <>
+<g>
+<path fillRule="evenodd" clipRule="evenodd" d="M4 5C4 3.34315 5.34315 2 7 2H17C18.6569 2 20 3.34315 20 5V21C20 21.3466 19.8205 21.6684 19.5257 21.8507C19.2309 22.0329 18.8628 22.0494 18.5528 21.8944L12 18.618L5.44721 21.8944C5.13723 22.0494 4.76909 22.0329 4.47427 21.8507C4.17945 21.6684 4 21.3466 4 21V5ZM7 4C6.44772 4 6 4.44772 6 5V19.382L11.5528 16.6056C11.8343 16.4648 12.1657 16.4648 12.4472 16.6056L18 19.382V5C18 4.44772 17.5523 4 17 4H7Z" fill="currentColor"/>
+</g>
+  </>,
+);

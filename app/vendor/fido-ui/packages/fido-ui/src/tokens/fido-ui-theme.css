@@ -1,0 +1,532 @@
+/*
+ * FidoUI Design System - Design Tokens (Primary theme — default)
+ * Tailwind CSS v4 @theme tokens from Figma Primary variable mode.
+ *
+ * Usage (Tailwind v4):
+ *   @import "tailwindcss";
+ *   @import "@petscreeninginc/fido-ui/tokens/theme.css";
+ *   @source "../node_modules/@petscreeninginc/fido-ui/dist";
+ *
+ * Responsive: canonical names use Desktop values. Tablet/mobile:
+ *   --*-fido-ui-{name}-tablet, --*-fido-ui-{name}-mobile
+ *
+ * FidoAlert: themes/fido-alert.css + data-fido-ui-theme="fidoAlert".
+ */
+
+@theme {
+  /* ------------------------------------------------------------------ */
+  /* Primitive palettes (Colors.Tokens)                                  */
+  /* ------------------------------------------------------------------ */
+  --color-fido-ui-primary-50: #f6f9ff;
+  --color-fido-ui-primary-100: #ecf3fe;
+  --color-fido-ui-primary-200: #d5e2fd;
+  --color-fido-ui-primary-300: #b5cdfc;
+  --color-fido-ui-primary-400: #82a8f5;
+  --color-fido-ui-primary-500: #5b87ea;
+  --color-fido-ui-primary-600: #3a72e6;
+  --color-fido-ui-primary-700: #225bd4;
+  --color-fido-ui-primary-800: #1748ab;
+  --color-fido-ui-primary-900: #133d8f;
+
+  --color-fido-ui-secondary-50: #f7f5fc;
+  --color-fido-ui-secondary-100: #eeeaf8;
+  --color-fido-ui-secondary-200: #ddd5f0;
+  --color-fido-ui-secondary-300: #c5b7e3;
+  --color-fido-ui-secondary-400: #aa95d2;
+  --color-fido-ui-secondary-500: #8d74be;
+  --color-fido-ui-secondary-600: #7658aa;
+  --color-fido-ui-secondary-700: #654598;
+  --color-fido-ui-secondary-800: #563b81;
+  --color-fido-ui-secondary-900: #48326c;
+
+  --color-fido-ui-neutral-50: #fafafa;
+  --color-fido-ui-neutral-100: #f5f5f5;
+  --color-fido-ui-neutral-200: #e5e5e5;
+  --color-fido-ui-neutral-300: #d4d4d4;
+  --color-fido-ui-neutral-400: #a3a3a3;
+  --color-fido-ui-neutral-500: #737373;
+  --color-fido-ui-neutral-600: #525252;
+  --color-fido-ui-neutral-700: #404040;
+  --color-fido-ui-neutral-800: #262626;
+  --color-fido-ui-neutral-900: #171717;
+  --color-fido-ui-neutral-white: #ffffff;
+  --color-fido-ui-neutral-black: #0a0a0a;
+  --color-fido-ui-neutral-950: var(--color-fido-ui-neutral-black);
+
+  --color-fido-ui-destruct-50: #fff1f2;
+  --color-fido-ui-destruct-100: #ffe4e6;
+  --color-fido-ui-destruct-200: #fecdd3;
+  --color-fido-ui-destruct-300: #fda4af;
+  --color-fido-ui-destruct-400: #fb7185;
+  --color-fido-ui-destruct-500: #f43f5e;
+  --color-fido-ui-destruct-600: #e11d48;
+  --color-fido-ui-destruct-700: #be123c;
+  --color-fido-ui-destruct-800: #9f1239;
+  --color-fido-ui-destruct-900: #881337;
+  --color-fido-ui-destruct-950: #4c0519;
+
+  --color-fido-ui-success-50: #ecfdf7;
+  --color-fido-ui-success-100: #d1faec;
+  --color-fido-ui-success-200: #a7f3da;
+  --color-fido-ui-success-300: #6ee7bf;
+  --color-fido-ui-success-400: #34d39e;
+  --color-fido-ui-success-500: #10b981;
+  --color-fido-ui-success-600: #059666;
+  --color-fido-ui-success-700: #047852;
+  --color-fido-ui-success-800: #065f42;
+  --color-fido-ui-success-900: #064e36;
+  --color-fido-ui-success-950: #022f2e;
+
+  --color-fido-ui-warning-50: #fff7ed;
+  --color-fido-ui-warning-100: #ffedd5;
+  --color-fido-ui-warning-200: #fed7aa;
+  --color-fido-ui-warning-300: #fdba74;
+  --color-fido-ui-warning-400: #fb923c;
+  --color-fido-ui-warning-500: #f97316;
+  --color-fido-ui-warning-600: #ea580c;
+  --color-fido-ui-warning-700: #c2410c;
+  --color-fido-ui-warning-800: #9a3412;
+  --color-fido-ui-warning-900: #7c2d12;
+  --color-fido-ui-warning-950: #561904;
+
+  --color-fido-ui-info-50: #ecfdff;
+  --color-fido-ui-info-100: #cef8fe;
+  --color-fido-ui-info-200: #a5f0fc;
+  --color-fido-ui-info-300: #63ddf3;
+  --color-fido-ui-info-400: #23c4e8;
+  --color-fido-ui-info-500: #1aa8cd;
+  --color-fido-ui-info-600: #1481a7;
+  --color-fido-ui-info-700: #156481;
+  --color-fido-ui-info-800: #184e65;
+  --color-fido-ui-info-900: #193f52;
+  --color-fido-ui-info-950: #123343;
+
+  /* Alert mirrors destruct (FidoUI convention) */
+  --color-fido-ui-alert-50: var(--color-fido-ui-destruct-50);
+  --color-fido-ui-alert-100: var(--color-fido-ui-destruct-100);
+  --color-fido-ui-alert-200: var(--color-fido-ui-destruct-200);
+  --color-fido-ui-alert-300: var(--color-fido-ui-destruct-300);
+  --color-fido-ui-alert-400: var(--color-fido-ui-destruct-400);
+  --color-fido-ui-alert-500: var(--color-fido-ui-destruct-500);
+  --color-fido-ui-alert-600: var(--color-fido-ui-destruct-600);
+  --color-fido-ui-alert-700: var(--color-fido-ui-destruct-700);
+  --color-fido-ui-alert-800: var(--color-fido-ui-destruct-800);
+  --color-fido-ui-alert-900: var(--color-fido-ui-destruct-900);
+  --color-fido-ui-alert-950: var(--color-fido-ui-destruct-950);
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic colors (Colors.Type, surface, Utility, Illustration)       */
+  /* ------------------------------------------------------------------ */
+  --color-fido-ui-type-heading: var(--color-fido-ui-neutral-900);
+  --color-fido-ui-type-body: var(--color-fido-ui-neutral-800);
+  --color-fido-ui-type-action-dark: var(--color-fido-ui-primary-700);
+  --color-fido-ui-type-action-light: var(--color-fido-ui-primary-200);
+  --color-fido-ui-type-callout-dark: var(--color-fido-ui-secondary-800);
+  --color-fido-ui-type-callout-light: var(--color-fido-ui-secondary-200);
+
+  --color-fido-ui-surface-neutral-50: var(--color-fido-ui-neutral-50);
+  --color-fido-ui-surface-neutral-100: var(--color-fido-ui-neutral-100);
+  --color-fido-ui-surface-neutral-200: var(--color-fido-ui-neutral-200);
+  --color-fido-ui-surface-neutral-300: var(--color-fido-ui-neutral-300);
+  --color-fido-ui-surface-neutral-600: var(--color-fido-ui-neutral-600);
+  --color-fido-ui-surface-neutral-700: var(--color-fido-ui-neutral-700);
+  --color-fido-ui-surface-neutral-900: var(--color-fido-ui-neutral-900);
+  --color-fido-ui-surface-neutral-950: var(--color-fido-ui-neutral-950);
+
+  --color-fido-ui-surface-primary-100: var(--color-fido-ui-primary-100);
+  --color-fido-ui-surface-primary-200: var(--color-fido-ui-primary-200);
+  --color-fido-ui-surface-primary-300: var(--color-fido-ui-primary-300);
+  --color-fido-ui-surface-primary-700: var(--color-fido-ui-primary-700);
+  --color-fido-ui-surface-primary-800: var(--color-fido-ui-primary-800);
+  --color-fido-ui-surface-primary-900: var(--color-fido-ui-primary-900);
+
+  --color-fido-ui-surface-secondary-100: var(--color-fido-ui-secondary-100);
+  --color-fido-ui-surface-secondary-200: var(--color-fido-ui-secondary-200);
+  --color-fido-ui-surface-secondary-300: var(--color-fido-ui-secondary-300);
+  --color-fido-ui-surface-secondary-500: var(--color-fido-ui-secondary-500);
+  --color-fido-ui-surface-secondary-700: var(--color-fido-ui-secondary-700);
+  --color-fido-ui-surface-secondary-900: var(--color-fido-ui-secondary-900);
+
+  --color-fido-ui-utility-success-50: var(--color-fido-ui-success-50);
+  --color-fido-ui-utility-success-100: var(--color-fido-ui-success-100);
+  --color-fido-ui-utility-success-200: var(--color-fido-ui-success-200);
+  --color-fido-ui-utility-success-300: var(--color-fido-ui-success-300);
+  --color-fido-ui-utility-success-600: var(--color-fido-ui-success-600);
+  --color-fido-ui-utility-success-900: var(--color-fido-ui-success-900);
+
+  --color-fido-ui-utility-inform-50: var(--color-fido-ui-info-50);
+  --color-fido-ui-utility-inform-100: var(--color-fido-ui-info-100);
+  --color-fido-ui-utility-inform-200: var(--color-fido-ui-info-200);
+  --color-fido-ui-utility-inform-300: var(--color-fido-ui-info-300);
+  --color-fido-ui-utility-inform-600: var(--color-fido-ui-info-600);
+  --color-fido-ui-utility-inform-900: var(--color-fido-ui-info-900);
+
+  --color-fido-ui-utility-destruct-50: var(--color-fido-ui-destruct-50);
+  --color-fido-ui-utility-destruct-100: var(--color-fido-ui-destruct-100);
+  --color-fido-ui-utility-destruct-200: var(--color-fido-ui-destruct-200);
+  --color-fido-ui-utility-destruct-300: var(--color-fido-ui-destruct-300);
+  --color-fido-ui-utility-destruct-600: var(--color-fido-ui-destruct-600);
+  --color-fido-ui-utility-destruct-900: var(--color-fido-ui-destruct-900);
+
+  --color-fido-ui-utility-warning-50: var(--color-fido-ui-warning-50);
+  --color-fido-ui-utility-warning-100: var(--color-fido-ui-warning-100);
+  --color-fido-ui-utility-warning-200: var(--color-fido-ui-warning-200);
+  --color-fido-ui-utility-warning-300: var(--color-fido-ui-warning-300);
+  --color-fido-ui-utility-warning-500: var(--color-fido-ui-warning-500);
+  --color-fido-ui-utility-warning-700: var(--color-fido-ui-warning-700);
+
+  --color-fido-ui-illustration-neutral-400: var(--color-fido-ui-neutral-400);
+  --color-fido-ui-illustration-neutral-600: var(--color-fido-ui-neutral-600);
+  --color-fido-ui-illustration-success-200: var(--color-fido-ui-success-200);
+  --color-fido-ui-illustration-success-400: var(--color-fido-ui-success-400);
+  --color-fido-ui-illustration-secondary-200: var(--color-fido-ui-secondary-200);
+  --color-fido-ui-illustration-secondary-400: var(--color-fido-ui-secondary-400);
+  --color-fido-ui-illustration-primary-200: var(--color-fido-ui-primary-200);
+  --color-fido-ui-illustration-primary-400: var(--color-fido-ui-primary-400);
+  --color-fido-ui-illustration-destruct-500: var(--color-fido-ui-destruct-500);
+
+  /* ------------------------------------------------------------------ */
+  /* Spacing — Gaps (Desktop canonical)                                  */
+  /* ------------------------------------------------------------------ */
+  --spacing-fido-ui-2xs: 4px;
+  --spacing-fido-ui-2xs-tablet: 4px;
+  --spacing-fido-ui-2xs-mobile: 2px;
+
+  --spacing-fido-ui-xs: 6px;
+  --spacing-fido-ui-xs-tablet: 6px;
+  --spacing-fido-ui-xs-mobile: 4px;
+
+  --spacing-fido-ui-sm: 8px;
+  --spacing-fido-ui-sm-tablet: 8px;
+  --spacing-fido-ui-sm-mobile: 6px;
+
+  --spacing-fido-ui-md: 10px;
+  --spacing-fido-ui-md-tablet: 8px;
+  --spacing-fido-ui-md-mobile: 6px;
+
+  --spacing-fido-ui-lg: 12px;
+  --spacing-fido-ui-lg-tablet: 10px;
+  --spacing-fido-ui-lg-mobile: 8px;
+
+  --spacing-fido-ui-base: 16px;
+  --spacing-fido-ui-base-tablet: 14px;
+  --spacing-fido-ui-base-mobile: 12px;
+
+  --spacing-fido-ui-xl: 20px;
+  --spacing-fido-ui-xl-tablet: 16px;
+  --spacing-fido-ui-xl-mobile: 12px;
+
+  --spacing-fido-ui-2xl: 24px;
+  --spacing-fido-ui-2xl-tablet: 20px;
+  --spacing-fido-ui-2xl-mobile: 16px;
+
+  --spacing-fido-ui-3xl: 32px;
+  --spacing-fido-ui-3xl-tablet: 24px;
+  --spacing-fido-ui-3xl-mobile: 20px;
+
+  --spacing-fido-ui-4xl: 40px;
+  --spacing-fido-ui-4xl-tablet: 32px;
+  --spacing-fido-ui-4xl-mobile: 28px;
+
+  --spacing-fido-ui-5xl: 64px;
+  --spacing-fido-ui-5xl-tablet: 56px;
+  --spacing-fido-ui-5xl-mobile: 48px;
+
+  /* ------------------------------------------------------------------ */
+  /* Border radius — Corners (Desktop canonical)                         */
+  /* ------------------------------------------------------------------ */
+  --radius-fido-ui-xs: 4px;
+  --radius-fido-ui-xs-tablet: 4px;
+  --radius-fido-ui-xs-mobile: 2px;
+
+  --radius-fido-ui-sm: 6px;
+  --radius-fido-ui-sm-tablet: 6px;
+  --radius-fido-ui-sm-mobile: 4px;
+
+  --radius-fido-ui-md: 8px;
+  --radius-fido-ui-md-tablet: 8px;
+  --radius-fido-ui-md-mobile: 6px;
+
+  --radius-fido-ui-lg: 12px;
+  --radius-fido-ui-lg-tablet: 10px;
+  --radius-fido-ui-lg-mobile: 8px;
+
+  --radius-fido-ui-xl: 16px;
+  --radius-fido-ui-xl-tablet: 14px;
+  --radius-fido-ui-xl-mobile: 12px;
+
+  --radius-fido-ui-full: 9999px;
+
+  /* ------------------------------------------------------------------ */
+  /* Border width — Strokes                                              */
+  /* ------------------------------------------------------------------ */
+  --border-width-fido-ui-xs: 0.5px;
+  --border-width-fido-ui-sm: 1px;
+  --border-width-fido-ui-md: 2px;
+  --border-width-fido-ui-lg: 3px;
+  --border-width-fido-ui-xl: 4px;
+
+  /* ------------------------------------------------------------------ */
+  /* Size scale (icon / control heights, Desktop canonical)              */
+  /* ------------------------------------------------------------------ */
+  --size-fido-ui-2xs: 16px;
+  --size-fido-ui-2xs-tablet: 16px;
+  --size-fido-ui-2xs-mobile: 14px;
+
+  --size-fido-ui-xs: 20px;
+  --size-fido-ui-xs-tablet: 20px;
+  --size-fido-ui-xs-mobile: 16px;
+
+  --size-fido-ui-sm: 24px;
+  --size-fido-ui-sm-tablet: 24px;
+  --size-fido-ui-sm-mobile: 20px;
+
+  --size-fido-ui-md: 32px;
+  --size-fido-ui-md-tablet: 32px;
+  --size-fido-ui-md-mobile: 24px;
+
+  --size-fido-ui-lg: 48px;
+  --size-fido-ui-lg-tablet: 40px;
+  --size-fido-ui-lg-mobile: 32px;
+
+  --width-fido-ui-2xs: var(--size-fido-ui-2xs);
+  --width-fido-ui-xs: var(--size-fido-ui-xs);
+  --width-fido-ui-sm: var(--size-fido-ui-sm);
+  --width-fido-ui-md: var(--size-fido-ui-md);
+  --width-fido-ui-lg: var(--size-fido-ui-lg);
+
+  --height-fido-ui-2xs: var(--size-fido-ui-2xs);
+  --height-fido-ui-xs: var(--size-fido-ui-xs);
+  --height-fido-ui-sm: var(--size-fido-ui-sm);
+  --height-fido-ui-md: var(--size-fido-ui-md);
+  --height-fido-ui-lg: var(--size-fido-ui-lg);
+
+  /* ------------------------------------------------------------------ */
+  /* Typography — font families (Fonts.Family)                           */
+  /* ------------------------------------------------------------------ */
+  --font-fido-ui-heading: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-fido-ui-paragraph: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-fido-ui-label: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+  /* Heading / paragraph scale (Fonts.Sizes, Desktop canonical)          */
+  --font-size-fido-ui-h1: 40px;
+  --font-size-fido-ui-h1-tablet: 36px;
+  --font-size-fido-ui-h1-mobile: 30px;
+
+  --font-size-fido-ui-h2: 32px;
+  --font-size-fido-ui-h2-tablet: 28px;
+  --font-size-fido-ui-h2-mobile: 24px;
+
+  --font-size-fido-ui-h3: 24px;
+  --font-size-fido-ui-h3-tablet: 24px;
+  --font-size-fido-ui-h3-mobile: 20px;
+
+  --font-size-fido-ui-h4: 20px;
+  --font-size-fido-ui-h4-tablet: 20px;
+  --font-size-fido-ui-h4-mobile: 16px;
+
+  --font-size-fido-ui-h5: 16px;
+  --font-size-fido-ui-h5-tablet: 16px;
+  --font-size-fido-ui-h5-mobile: 14px;
+
+  --font-size-fido-ui-p1: 20px;
+  --font-size-fido-ui-p1-tablet: 20px;
+  --font-size-fido-ui-p1-mobile: 18px;
+
+  --font-size-fido-ui-p2: 16px;
+  --font-size-fido-ui-p2-tablet: 16px;
+  --font-size-fido-ui-p2-mobile: 14px;
+
+  --font-size-fido-ui-p3: 14px;
+  --font-size-fido-ui-p3-tablet: 14px;
+  --font-size-fido-ui-p3-mobile: 12px;
+
+  --font-size-fido-ui-p4: 12px;
+  --font-size-fido-ui-p4-tablet: 12px;
+  --font-size-fido-ui-p4-mobile: 10px;
+
+  --font-size-fido-ui-p5: 10px;
+  --font-size-fido-ui-p5-tablet: 10px;
+  --font-size-fido-ui-p5-mobile: 8px;
+
+  --text-fido-ui-h1: var(--font-size-fido-ui-h1);
+  --text-fido-ui-h1-tablet: var(--font-size-fido-ui-h1-tablet);
+  --text-fido-ui-h1-mobile: var(--font-size-fido-ui-h1-mobile);
+  --text-fido-ui-h2: var(--font-size-fido-ui-h2);
+  --text-fido-ui-h2-tablet: var(--font-size-fido-ui-h2-tablet);
+  --text-fido-ui-h2-mobile: var(--font-size-fido-ui-h2-mobile);
+  --text-fido-ui-h3: var(--font-size-fido-ui-h3);
+  --text-fido-ui-h3-tablet: var(--font-size-fido-ui-h3-tablet);
+  --text-fido-ui-h3-mobile: var(--font-size-fido-ui-h3-mobile);
+  --text-fido-ui-h4: var(--font-size-fido-ui-h4);
+  --text-fido-ui-h4-tablet: var(--font-size-fido-ui-h4-tablet);
+  --text-fido-ui-h4-mobile: var(--font-size-fido-ui-h4-mobile);
+  --text-fido-ui-h5: var(--font-size-fido-ui-h5);
+  --text-fido-ui-h5-tablet: var(--font-size-fido-ui-h5-tablet);
+  --text-fido-ui-h5-mobile: var(--font-size-fido-ui-h5-mobile);
+  --text-fido-ui-p1: var(--font-size-fido-ui-p1);
+  --text-fido-ui-p1-tablet: var(--font-size-fido-ui-p1-tablet);
+  --text-fido-ui-p1-mobile: var(--font-size-fido-ui-p1-mobile);
+  --text-fido-ui-p2: var(--font-size-fido-ui-p2);
+  --text-fido-ui-p2-tablet: var(--font-size-fido-ui-p2-tablet);
+  --text-fido-ui-p2-mobile: var(--font-size-fido-ui-p2-mobile);
+  --text-fido-ui-p3: var(--font-size-fido-ui-p3);
+  --text-fido-ui-p3-tablet: var(--font-size-fido-ui-p3-tablet);
+  --text-fido-ui-p3-mobile: var(--font-size-fido-ui-p3-mobile);
+  --text-fido-ui-p4: var(--font-size-fido-ui-p4);
+  --text-fido-ui-p4-tablet: var(--font-size-fido-ui-p4-tablet);
+  --text-fido-ui-p4-mobile: var(--font-size-fido-ui-p4-mobile);
+  --text-fido-ui-p5: var(--font-size-fido-ui-p5);
+  --text-fido-ui-p5-tablet: var(--font-size-fido-ui-p5-tablet);
+  --text-fido-ui-p5-mobile: var(--font-size-fido-ui-p5-mobile);
+
+  --line-height-fido-ui-normal: 1.4;
+  --line-height-fido-ui-tight: 1.25;
+  --line-height-fido-ui-relaxed: 1.6;
+
+  --leading-fido-ui-normal: var(--line-height-fido-ui-normal);
+  --leading-fido-ui-tight: var(--line-height-fido-ui-tight);
+  --leading-fido-ui-relaxed: var(--line-height-fido-ui-relaxed);
+
+  /* ------------------------------------------------------------------ */
+  /* Blocks — layout (Gap / Padding / Corners, Desktop canonical)        */
+  /* ------------------------------------------------------------------ */
+  --spacing-fido-ui-block-h1-gap: 24px;
+  --spacing-fido-ui-block-h1-gap-tablet: 20px;
+  --spacing-fido-ui-block-h1-gap-mobile: 16px;
+  --spacing-fido-ui-block-h1-padding: 32px;
+  --spacing-fido-ui-block-h1-padding-tablet: 24px;
+  --spacing-fido-ui-block-h1-padding-mobile: 16px;
+  --radius-fido-ui-block-h1: 0px;
+  --radius-fido-ui-block-h1-tablet: 0px;
+  --radius-fido-ui-block-h1-mobile: 0px;
+
+  --spacing-fido-ui-block-h2-gap: 20px;
+  --spacing-fido-ui-block-h2-gap-tablet: 16px;
+  --spacing-fido-ui-block-h2-gap-mobile: 14px;
+  --spacing-fido-ui-block-h2-padding: 28px;
+  --spacing-fido-ui-block-h2-padding-tablet: 28px;
+  --spacing-fido-ui-block-h2-padding-mobile: 20px;
+  --radius-fido-ui-block-h2: 0px;
+  --radius-fido-ui-block-h2-tablet: 0px;
+  --radius-fido-ui-block-h2-mobile: 0px;
+
+  --spacing-fido-ui-block-h3-gap: 16px;
+  --spacing-fido-ui-block-h3-gap-tablet: 14px;
+  --spacing-fido-ui-block-h3-gap-mobile: 12px;
+  --spacing-fido-ui-block-h3-padding: 24px;
+  --spacing-fido-ui-block-h3-padding-tablet: 24px;
+  --spacing-fido-ui-block-h3-padding-mobile: 16px;
+  --radius-fido-ui-block-h3: 0px;
+  --radius-fido-ui-block-h3-tablet: 0px;
+  --radius-fido-ui-block-h3-mobile: 0px;
+
+  --spacing-fido-ui-block-h4-gap: 16px;
+  --spacing-fido-ui-block-h4-gap-tablet: 14px;
+  --spacing-fido-ui-block-h4-gap-mobile: 12px;
+  --spacing-fido-ui-block-h4-padding: 20px;
+  --spacing-fido-ui-block-h4-padding-tablet: 20px;
+  --spacing-fido-ui-block-h4-padding-mobile: 12px;
+  --radius-fido-ui-block-h4: 0px;
+  --radius-fido-ui-block-h4-tablet: 0px;
+  --radius-fido-ui-block-h4-mobile: 8px;
+
+  --spacing-fido-ui-block-h5-gap: 12px;
+  --spacing-fido-ui-block-h5-gap-tablet: 10px;
+  --spacing-fido-ui-block-h5-gap-mobile: 8px;
+  --spacing-fido-ui-block-h5-padding: 16px;
+  --spacing-fido-ui-block-h5-padding-tablet: 16px;
+  --spacing-fido-ui-block-h5-padding-mobile: 12px;
+  --radius-fido-ui-block-h5: 0px;
+  --radius-fido-ui-block-h5-tablet: 0px;
+  --radius-fido-ui-block-h5-mobile: 0px;
+
+  --spacing-fido-ui-block-p1-gap: 12px;
+  --spacing-fido-ui-block-p1-gap-tablet: 10px;
+  --spacing-fido-ui-block-p1-gap-mobile: 8px;
+  --spacing-fido-ui-block-p1-padding: 16px;
+  --spacing-fido-ui-block-p1-padding-tablet: 16px;
+  --spacing-fido-ui-block-p1-padding-mobile: 12px;
+  --radius-fido-ui-block-p1: 0px;
+  --radius-fido-ui-block-p1-tablet: 0px;
+  --radius-fido-ui-block-p1-mobile: 0px;
+
+  --spacing-fido-ui-block-p2-gap: 12px;
+  --spacing-fido-ui-block-p2-gap-tablet: 10px;
+  --spacing-fido-ui-block-p2-gap-mobile: 8px;
+  --spacing-fido-ui-block-p2-padding: 14px;
+  --spacing-fido-ui-block-p2-padding-tablet: 12px;
+  --spacing-fido-ui-block-p2-padding-mobile: 8px;
+  --radius-fido-ui-block-p2: 0px;
+  --radius-fido-ui-block-p2-tablet: 0px;
+  --radius-fido-ui-block-p2-mobile: 0px;
+
+  --spacing-fido-ui-block-p3-gap: 10px;
+  --spacing-fido-ui-block-p3-gap-tablet: 8px;
+  --spacing-fido-ui-block-p3-gap-mobile: 6px;
+  --spacing-fido-ui-block-p3-padding: 12px;
+  --spacing-fido-ui-block-p3-padding-tablet: 10px;
+  --spacing-fido-ui-block-p3-padding-mobile: 8px;
+  --radius-fido-ui-block-p3: 0px;
+  --radius-fido-ui-block-p3-tablet: 0px;
+  --radius-fido-ui-block-p3-mobile: 0px;
+
+  --spacing-fido-ui-block-p4-gap: 8px;
+  --spacing-fido-ui-block-p4-gap-tablet: 6px;
+  --spacing-fido-ui-block-p4-gap-mobile: 4px;
+  --spacing-fido-ui-block-p4-padding: 8px;
+  --spacing-fido-ui-block-p4-padding-tablet: 8px;
+  --spacing-fido-ui-block-p4-padding-mobile: 6px;
+  --radius-fido-ui-block-p4: 0px;
+  --radius-fido-ui-block-p4-tablet: 0px;
+  --radius-fido-ui-block-p4-mobile: 0px;
+
+  --spacing-fido-ui-block-p5-gap: 6px;
+  --spacing-fido-ui-block-p5-gap-tablet: 4px;
+  --spacing-fido-ui-block-p5-gap-mobile: 2px;
+  --spacing-fido-ui-block-p5-padding: 6px;
+  --spacing-fido-ui-block-p5-padding-tablet: 6px;
+  --spacing-fido-ui-block-p5-padding-mobile: 4px;
+  --radius-fido-ui-block-p5: 2px;
+  --radius-fido-ui-block-p5-tablet: 0px;
+  --radius-fido-ui-block-p5-mobile: 0px;
+
+  /* ------------------------------------------------------------------ */
+  /* Shadows                                                             */
+  /* ------------------------------------------------------------------ */
+  --shadow-fido-ui-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-fido-ui-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-fido-ui-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* ------------------------------------------------------------------ */
+  /* Z-index — Layering                                                  */
+  /* ------------------------------------------------------------------ */
+  --z-index-fido-ui-overlay: 9999;
+
+  /* ------------------------------------------------------------------ */
+  /* Animations                                                          */
+  /* ------------------------------------------------------------------ */
+  --animate-fido-ui-fade-in: fido-ui-fade-in 150ms ease-out;
+  --animate-fido-ui-slide-up: fido-ui-slide-up 200ms ease-out;
+  --animate-fido-ui-scale-in: fido-ui-scale-in 150ms ease-out;
+
+  @keyframes fido-ui-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes fido-ui-slide-up {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fido-ui-scale-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}

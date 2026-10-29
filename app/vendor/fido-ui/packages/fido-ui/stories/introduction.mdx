@@ -1,0 +1,87 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started/Introduction" />
+
+# FidoUI Design System
+
+FidoUI is a React component library for the FidoUI Design System. It provides accessible, customizable UI components built on [Base UI](https://base-ui.com/) primitives with [Tailwind CSS](https://tailwindcss.com/) styling.
+
+## Features
+
+- **Accessible by default** — Built on Base UI, all interactive components meet WCAG 2.1 AA
+- **Tailwind CSS styling** — Design tokens exposed as Tailwind theme values
+- **Tree-shakeable** — Per-component imports ensure you only bundle what you use
+- **TypeScript-first** — Full type safety with autocomplete for all variants and props
+- **Framework-compatible** — Works with Next.js, Vite/TanStack, and Rails
+- **SSR-ready** — `'use client'` directives for React Server Components
+
+## Quick Start
+
+### 1. Install
+
+```bash
+npm install @petscreeninginc/fido-ui
+```
+
+### 2. Configure Tailwind
+
+**Tailwind v4:**
+
+```css
+@import "tailwindcss";
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@source "../node_modules/@petscreeninginc/fido-ui/dist";
+```
+
+**Tailwind v3:**
+
+```js
+// tailwind.config.js
+const fidoUITheme = require('@petscreeninginc/fido-ui/tokens/v3');
+
+module.exports = {
+  content: [
+    './src/**/*.{ts,tsx}',
+    './node_modules/@petscreeninginc/fido-ui/dist/**/*.{js,cjs}',
+  ],
+  theme: { extend: fidoUITheme },
+};
+```
+
+### 3. Use components
+
+```tsx
+import { Button } from '@petscreeninginc/fido-ui/button';
+import { Field } from '@petscreeninginc/fido-ui/field';
+import { Input } from '@petscreeninginc/fido-ui/input';
+
+function MyForm() {
+  return (
+    <div>
+      <Field label="Email">
+        <Input placeholder="you@example.com" />
+      </Field>
+      <Button color="primary" shade="dark">Submit</Button>
+    </div>
+  );
+}
+```
+
+## Import Patterns
+
+**Per-component imports (recommended):**
+
+```tsx
+import { Button } from '@petscreeninginc/fido-ui/button';
+import { Select, SelectItem } from '@petscreeninginc/fido-ui/select';
+```
+
+**Barrel import (prototyping):**
+
+```tsx
+import { Button, Select, SelectItem } from '@petscreeninginc/fido-ui';
+```
+
+## Components
+
+Browse the sidebar to see all available components with interactive examples and auto-generated prop documentation.
