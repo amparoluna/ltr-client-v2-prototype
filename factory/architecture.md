@@ -34,7 +34,7 @@ SQLite needs no separate database service. Drizzle keeps a later move to Postgre
 - TypeScript on the client and the server.
 - A database change is a Drizzle migration. The seed script resets the file to the seeded records.
 - Vitest, run from `app/`. Each slice adds API tests for what it saves and for who is refused.
-- Reference only: `dev-hub/apps/ltr-v2-client-prototype`. Copy from it. Do not import from it.
+- Reference only: `dev-hub/apps/ltr-v2-client-prototype`. Copy from it. Do not import from it. Do not branch, commit, or edit that repository.
 
 ## Open until slice 0
 

@@ -7,6 +7,10 @@ Status: approved. Every slice follows these steps, in order.
 - **Driver**: approves the slice note and closes the slice.
 - **Agent**: writes the note, builds, checks, opens the pull request, and moves the GitHub issue.
 
+## Repository
+
+Factory files and app code are written in [amparoluna/ltr-client-v2-prototype](https://github.com/amparoluna/ltr-client-v2-prototype). Before any git command, confirm `origin` is `https://github.com/amparoluna/ltr-client-v2-prototype`. The dev-hub app in [scope.md](scope.md) is reference only. Read it. Do not branch, commit, or edit it.
+
 ## Publish, once
 
 When the Driver approves [scope.md](scope.md), run `/to-tickets` on that file.
@@ -26,7 +30,7 @@ Issue comments are added at Pick, at Note, when the note changes after approval,
 
 ## Steps for one slice
 
-1. **Pick.** Take the open issue whose blockers are all closed. If more than one is open, take the lowest number. Create `slice/NN-name` from `main`. Set Status to `In Progress`, comment `Building`, and name the issue. All work for the slice stays on that branch.
+1. **Pick.** Take the open issue whose blockers are all closed. If more than one is open, take the lowest number. Confirm `origin` is `https://github.com/amparoluna/ltr-client-v2-prototype`, then create `slice/NN-name` from `main` in that clone. Set Status to `In Progress`, comment `Building`, and name the issue. All work for the slice stays on that branch.
 2. **Note.** Write `factory/slices/NN-name.md` with these headings only:
    - **Does:** what the user does on the screen.
    - **Saves:** what is written, and where.
@@ -60,6 +64,7 @@ A new slice is not added to this file or this issue. Stop and ask. When the Driv
 
 Stop and ask the Driver when:
 
+- `origin` is not `https://github.com/amparoluna/ltr-client-v2-prototype`;
 - the slice note and the reference app disagree;
 - the slice needs something [scope.md](scope.md) lists as out of scope;
 - a check fails twice after a fix.

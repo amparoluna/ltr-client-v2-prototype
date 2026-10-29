@@ -1,6 +1,6 @@
 # Agents
 
-This repository is a small software factory and the LTR V2 client prototype it produces.
+This repository is [amparoluna/ltr-client-v2-prototype](https://github.com/amparoluna/ltr-client-v2-prototype): a small software factory and the LTR V2 client prototype it produces. Write factory files and app code only here. Dev-hub is reference only. Do not branch, commit, or edit it.
 
 Read these before any change:
 

@@ -10,7 +10,7 @@ Show engineers, product, and leadership a small factory producing a working LTR 
 
 A property-manager web app, rebuilt in this repository. Saved data lives in a database and survives a restart.
 
-`dev-hub/apps/ltr-v2-client-prototype` is reference only. Copy its screens, copy, and seed data. Do not import its code.
+`dev-hub/apps/ltr-v2-client-prototype` is reference only. Copy its screens, copy, and seed data. Do not import its code. Do not branch, commit, or edit that repository.
 
 ## Users
 
