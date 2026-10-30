@@ -1,0 +1,9 @@
+export { CalendarBoldIcon } from './calendar-bold';
+export { CalendarIcon } from './calendar';
+export { CalendarCheck2Icon } from './calendar-check2';
+export { CalendarCheckIcon } from './calendar-check';
+export { CalendarClockIcon } from './calendar-clock';
+export { ClockIcon } from './clock';
+export { ClockBoldIcon } from './clock-bold';
+export { AppointmentsIcon } from './appointments';
+export { HistoryIcon } from './history';

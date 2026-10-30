@@ -18,10 +18,10 @@ A user picker, no passwords. Every write is stored under the selected user.
 
 | Seed | Role | Can edit |
 | --- | --- | --- |
-| One Org admin | Org admin | Every settings screen, including policy. Every property, including ones added later |
-| One Property manager admin | Property manager admin | Assigned properties, and groups assigned directly |
+| One Org Admin | Org Admin | Every settings screen, including policy. Every property, including ones added later |
+| Two Property Managers | Property Manager | Assigned properties, and groups assigned directly |
 
-The Property manager admin can see General, Integrations, Users, Billing, and Policy management, and cannot edit them. Policy fields are read-only on every screen. A group that only contains one of their properties is not theirs to edit.
+The Property Manager can see General, Integrations, Users, Billing, and Policy management, and cannot edit them. Policy fields are read-only on every screen. A group that only contains one of their properties is not theirs to edit.
 
 ## Slices
 

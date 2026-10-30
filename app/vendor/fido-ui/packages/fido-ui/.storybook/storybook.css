@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "../src/tokens/fido-ui-theme.css";
+@import "../src/tokens/themes/fido-alert.css";
+@source "../src";
+@source "../stories";
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../src/assets/fonts/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../src/assets/fonts/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*
+ * Base UI v1.3.0 `useScrollLock` shares a module-level ScrollLocker singleton
+ * whose lock()/unlock() are deferred with setTimeout(0). On an autodocs page many
+ * popup components (e.g. Combobox) mount at once, so their acquire()/release()
+ * calls interleave with the deferred lock/unlock and desync the ref-count. The
+ * lock's `updateGutterOnly` branch then leaves `overflow: hidden` stuck on <body>
+ * (and `scrollbar-gutter: stable` on <html>), which makes the Docs page
+ * unscrollable. Docs view never needs a modal scroll-lock, so keep the preview
+ * document scrollable in Docs mode only. Both root containers exist in the DOM;
+ * the docs container (`#storybook-docs`) is only visible (not `[hidden]`) on docs
+ * pages, while interactive stories render the visible `#storybook-root` and keep
+ * their real scroll-lock behavior.
+ */
+html:has(#storybook-docs:not([hidden])) {
+  scrollbar-gutter: auto !important;
+}
+
+body:has(#storybook-docs:not([hidden])) {
+  overflow: auto !important;
+  position: static !important;
+  height: auto !important;
+  width: auto !important;
+}

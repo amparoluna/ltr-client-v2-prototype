@@ -1,0 +1,656 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started/Form Integration" />
+
+# Form Integration
+
+## Overview
+
+FidoUI components are "headless-friendly" — they work with any form library. This guide covers **TanStack Form** and **React Hook Form**, both of which are used across the org. Each section includes setup, component-specific patterns, and error handling.
+
+Because FidoUI components use a mix of native and custom APIs (some expose `onChange`, others use `onValueChange` or `onCheckedChange`), the key to a smooth integration is understanding which prop maps to which form library callback.
+
+## Component API Reference for Forms
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Value prop</th>
+      <th>Change handler</th>
+      <th>Supports <code>name</code></th>
+      <th>Supports <code>error</code></th>
+      <th>Underlying element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Input</code></td>
+      <td><code>value</code></td>
+      <td><code>onChange</code></td>
+      <td>Yes</td>
+      <td>No — wrap in <code>Field</code></td>
+      <td><code>input</code></td>
+    </tr>
+    <tr>
+      <td><code>Field</code></td>
+      <td>—</td>
+      <td>—</td>
+      <td>Via child</td>
+      <td>Yes</td>
+      <td>wrapper</td>
+    </tr>
+    <tr>
+      <td><code>Textarea</code></td>
+      <td><code>value</code></td>
+      <td><code>onChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td><code>textarea</code></td>
+    </tr>
+    <tr>
+      <td><code>Select</code></td>
+      <td><code>value</code></td>
+      <td><code>onValueChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>custom</td>
+    </tr>
+    <tr>
+      <td><code>DatePicker</code></td>
+      <td><code>value</code> (<code>Date | undefined</code>)</td>
+      <td><code>onChange</code></td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>custom button or input + popover</td>
+    </tr>
+    <tr>
+      <td><code>Combobox</code></td>
+      <td><code>value</code></td>
+      <td><code>onValueChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>custom</td>
+    </tr>
+    <tr>
+      <td><code>Checkbox</code></td>
+      <td><code>checked</code></td>
+      <td><code>onCheckedChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>custom</td>
+    </tr>
+    <tr>
+      <td><code>Switch</code></td>
+      <td><code>checked</code></td>
+      <td><code>onCheckedChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>custom</td>
+    </tr>
+    <tr>
+      <td><code>RadioGroup</code></td>
+      <td><code>value</code></td>
+      <td><code>onValueChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>custom</td>
+    </tr>
+    <tr>
+      <td><code>Slider</code></td>
+      <td><code>value</code></td>
+      <td><code>onValueChange</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>custom</td>
+    </tr>
+    <tr>
+      <td><code>InputOtp</code></td>
+      <td><code>value</code></td>
+      <td><code>inputProps.onChange</code></td>
+      <td>Yes</td>
+      <td>Yes (<code>errorMessage</code>)</td>
+      <td><code>input</code> (hidden)</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## TanStack Form + Zod
+
+### Setup
+
+```tsx
+import { useForm } from '@tanstack/react-form'
+import { z } from 'zod'
+
+import { Input } from '@petscreeninginc/fido-ui/input'
+import { Field } from '@petscreeninginc/fido-ui/field'
+import { Textarea } from '@petscreeninginc/fido-ui/textarea'
+import { Select, SelectItem } from '@petscreeninginc/fido-ui/select'
+import { DatePicker } from '@petscreeninginc/fido-ui/date-picker'
+import { Checkbox } from '@petscreeninginc/fido-ui/checkbox'
+import { RadioGroup, RadioItem } from '@petscreeninginc/fido-ui/radio-group'
+```
+
+### Error Handling Helper
+
+Since TanStack Form stores errors as arrays, use a small helper to extract a displayable string:
+
+```tsx
+function getFieldError(field: { state: { meta: { isTouched: boolean; isValid: boolean; errors: unknown[] } } }) {
+  if (!field.state.meta.isTouched || field.state.meta.isValid) return undefined;
+  return field.state.meta.errors
+    .map((e) => (typeof e === 'string' ? e : String(e)))
+    .join(', ');
+}
+```
+
+### Basic Pattern — Input
+
+```tsx
+const form = useForm({
+  defaultValues: { email: '' },
+  onSubmit: async ({ value }) => {
+    console.log(value);
+  },
+});
+
+// Inside your JSX:
+<form.Field
+  name="email"
+  validators={{
+    onBlur: z.string().email('Please enter a valid email'),
+  }}
+>
+  {(field) => (
+    <Field label="Email" error={getFieldError(field)}>
+      <Input
+        name={field.name}
+        value={field.state.value}
+        onChange={(e) => field.handleChange(e.target.value)}
+        onBlur={field.handleBlur}
+      />
+    </Field>
+  )}
+</form.Field>
+```
+
+### Textarea
+
+```tsx
+<form.Field
+  name="bio"
+  validators={{
+    onBlur: z.string().max(500, 'Bio must be 500 characters or fewer'),
+  }}
+>
+  {(field) => (
+    <Textarea
+      label="Bio"
+      name={field.name}
+      value={field.state.value}
+      onChange={(e) => field.handleChange(e.target.value)}
+      onBlur={field.handleBlur}
+      maxLength={500}
+      error={getFieldError(field)}
+    />
+  )}
+</form.Field>
+```
+
+### Select
+
+Select uses `onValueChange` instead of `onChange`. Map accordingly. Label chrome
+matches Field / Textarea — use `labelPlacement="stacked"` (default) or
+`"internal"`, plus `optional`, `tooltip`, `hideLabel`, `description`, and
+`error`.
+
+```tsx
+<form.Field
+  name="country"
+  validators={{
+    onBlur: z.string().min(1, 'Please select a country'),
+  }}
+>
+  {(field) => (
+    <Select
+      label="Country"
+      labelPlacement="stacked"
+      name={field.name}
+      value={field.state.value}
+      onValueChange={(value) => field.handleChange(value)}
+      error={getFieldError(field)}
+    >
+      <SelectItem value="us">United States</SelectItem>
+      <SelectItem value="ca">Canada</SelectItem>
+      <SelectItem value="mx">Mexico</SelectItem>
+    </Select>
+  )}
+</form.Field>
+```
+
+### DatePicker
+
+DatePicker is controlled with a `Date | undefined` value. Close the popover to
+mark the field touched when validation should run on blur. `dateFormat` controls
+how the selected date is displayed.
+
+```tsx
+<form.Field
+  name="moveInDate"
+  validators={{
+    onChange: z.date().optional(),
+  }}
+>
+  {(field) => (
+    <DatePicker
+      label="Move-in date"
+      optional
+      dateFormat="MM/dd/yyyy"
+      value={field.state.value}
+      onChange={(value) => field.handleChange(value)}
+      onOpenChange={(open) => {
+        if (!open) field.handleBlur()
+      }}
+      error={getFieldError(field)}
+    />
+  )}
+</form.Field>
+```
+
+### Checkbox
+
+Checkbox uses `checked` / `onCheckedChange` instead of `value` / `onChange`:
+
+```tsx
+<form.Field
+  name="terms"
+  validators={{
+    onBlur: z.literal(true, { errorMap: () => ({ message: 'You must accept the terms' }) }),
+  }}
+>
+  {(field) => (
+    <Checkbox
+      label="I accept the terms and conditions"
+      name={field.name}
+      checked={field.state.value}
+      onCheckedChange={(checked) => field.handleChange(checked)}
+      error={getFieldError(field)}
+    />
+  )}
+</form.Field>
+```
+
+### RadioGroup
+
+RadioGroup uses `onValueChange`, similar to Select:
+
+```tsx
+<form.Field
+  name="plan"
+  validators={{
+    onBlur: z.enum(['free', 'pro', 'enterprise'], { message: 'Please select a plan' }),
+  }}
+>
+  {(field) => (
+    <RadioGroup
+      label="Plan"
+      name={field.name}
+      value={field.state.value}
+      onValueChange={(value) => field.handleChange(value)}
+      error={getFieldError(field)}
+    >
+      <RadioItem value="free" label="Free" />
+      <RadioItem value="pro" label="Pro" />
+      <RadioItem value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )}
+</form.Field>
+```
+
+---
+
+## React Hook Form + Zod
+
+### Setup
+
+```tsx
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+
+import { Input } from '@petscreeninginc/fido-ui/input'
+import { Field } from '@petscreeninginc/fido-ui/field'
+import { Textarea } from '@petscreeninginc/fido-ui/textarea'
+import { Select, SelectItem } from '@petscreeninginc/fido-ui/select'
+import { DatePicker } from '@petscreeninginc/fido-ui/date-picker'
+import { Checkbox } from '@petscreeninginc/fido-ui/checkbox'
+import { RadioGroup, RadioItem } from '@petscreeninginc/fido-ui/radio-group'
+
+const schema = z.object({
+  email: z.string().email(),
+  bio: z.string().max(500).optional(),
+  country: z.string().min(1, 'Required'),
+  moveInDate: z.date().optional(),
+  terms: z.literal(true, { errorMap: () => ({ message: 'You must accept the terms' }) }),
+  plan: z.enum(['free', 'pro', 'enterprise']),
+});
+
+type FormValues = z.infer<typeof schema>;
+```
+
+### Pattern 1: register() for Native Elements
+
+Input wraps a native `<input>`, so `register()` works directly on `Input`. Put labels and errors on `Field`:
+
+```tsx
+const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({
+  resolver: zodResolver(schema),
+});
+
+<Field label="Email" error={errors.email?.message}>
+  <Input {...register('email')} />
+</Field>
+
+<Textarea
+  label="Bio"
+  {...register('bio')}
+  maxLength={500}
+  error={errors.bio?.message}
+/>
+```
+
+### Pattern 2: Controller for Custom Components
+
+Select, Checkbox, RadioGroup, and other custom components do not use native `onChange` — wrap them with `Controller`:
+
+**Select:**
+
+```tsx
+<Controller
+  name="country"
+  control={control}
+  render={({ field, fieldState }) => (
+    <Select
+      label="Country"
+      value={field.value}
+      onValueChange={field.onChange}
+      onOpenChange={() => field.onBlur()}
+      error={fieldState.error?.message}
+    >
+      <SelectItem value="us">United States</SelectItem>
+      <SelectItem value="ca">Canada</SelectItem>
+      <SelectItem value="mx">Mexico</SelectItem>
+    </Select>
+  )}
+/>
+```
+
+**DatePicker:**
+
+```tsx
+<Controller
+  name="moveInDate"
+  control={control}
+  render={({ field, fieldState }) => (
+    <DatePicker
+      label="Move-in date"
+      optional
+      dateFormat="MM/dd/yyyy"
+      value={field.value}
+      onChange={field.onChange}
+      onOpenChange={(open) => {
+        if (!open) field.onBlur()
+      }}
+      error={fieldState.error?.message}
+    />
+  )}
+/>
+```
+
+**Checkbox:**
+
+```tsx
+<Controller
+  name="terms"
+  control={control}
+  render={({ field, fieldState }) => (
+    <Checkbox
+      label="I accept the terms and conditions"
+      checked={field.value}
+      onCheckedChange={field.onChange}
+      error={fieldState.error?.message}
+    />
+  )}
+/>
+```
+
+**RadioGroup:**
+
+```tsx
+<Controller
+  name="plan"
+  control={control}
+  render={({ field, fieldState }) => (
+    <RadioGroup
+      label="Plan"
+      value={field.value}
+      onValueChange={field.onChange}
+      error={fieldState.error?.message}
+    >
+      <RadioItem value="free" label="Free" />
+      <RadioItem value="pro" label="Pro" />
+      <RadioItem value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )}
+/>
+```
+
+---
+
+## Tips & Gotchas
+
+- **Select, Combobox, RadioGroup, and Slider use `onValueChange`**, not `onChange`. Always map the form library's change handler to `onValueChange`.
+
+- **DatePicker uses `Date | undefined` with `onChange`.** Use a Controller-style
+  adapter and call the form library's blur handler when the popover closes.
+
+- **Checkbox and Switch use `onCheckedChange`**, not `onChange`. The callback receives a `boolean`, not an event.
+
+- **InputOtp passes events via `inputProps`** — wrap the `onChange` handler inside it:
+  ```tsx
+  <InputOtp
+    value={field.state.value}
+    inputProps={{
+      onChange: (e) => field.handleChange(e.target.value),
+      onBlur: field.handleBlur,
+    }}
+    errorMessage={getFieldError(field)}
+  />
+  ```
+
+- **TanStack Form errors are arrays**; React Hook Form errors are objects with a `.message` property. The `getFieldError` helper above normalizes TanStack's array format into a string.
+
+- **Use `onBlur` for validation timing.** For Select and Combobox (which have no native blur), trigger it via `onOpenChange`:
+  ```tsx
+  onOpenChange={(open) => { if (!open) field.onBlur(); }}
+  ```
+
+- **Field + Input.** `Input` is a bare styled primitive. Wrap it in `Field` for `label`, `hideLabel`, `labelPlacement`, `optional`, `tooltip`, `description`, `error`, and adornments.
+
+- **Slider's `onValueChange` receives `(value, event)`** — the value is `number | number[]`. Pass it directly to `field.handleChange` for TanStack Form, or `field.onChange` for React Hook Form.
+
+- **Most form components support `name`; DatePicker currently does not.** Store
+  its controlled `Date | undefined` value through your form library and serialize
+  it explicitly when native form submission is required.
+
+---
+
+## Advanced: TanStack Form Composition Pattern
+
+TanStack Form v1 supports a [composition pattern](https://tanstack.com/form/v1/docs/framework/react/guides/form-composition) that eliminates per-field wiring boilerplate. Instead of manually mapping `value`/`onChange`/`error` on every field, you create **pre-bound field components** that auto-connect via context.
+
+This is the **recommended setup for teams using TanStack Form**. Copy this into your app (not shipped by FidoUI — keeps the library form-agnostic).
+
+### 1. Create your app's form hook
+
+```tsx
+// src/lib/form.ts
+import { createFormHookContexts, createFormHook } from '@tanstack/react-form'
+
+// Import your pre-wired field components (see step 2)
+import { TextField, TextareaField, SelectField, CheckboxField } from './form-fields'
+
+const { fieldContext, formContext } = createFormHookContexts()
+
+export { fieldContext, formContext }
+
+export const { useAppForm } = createFormHook({
+  fieldContext,
+  formContext,
+  fieldComponents: {
+    TextField,
+    TextareaField,
+    SelectField,
+    CheckboxField,
+  },
+})
+```
+
+### 2. Create pre-wired FidoUI field components
+
+Each component uses `useFieldContext()` to auto-bind value, change handler, and errors:
+
+```tsx
+// src/lib/form-fields.tsx
+import { useFieldContext } from '@tanstack/react-form'
+import { Input } from '@petscreeninginc/fido-ui/input'
+import { Field } from '@petscreeninginc/fido-ui/field'
+import { Textarea } from '@petscreeninginc/fido-ui/textarea'
+import { Select, SelectItem } from '@petscreeninginc/fido-ui/select'
+import { Checkbox } from '@petscreeninginc/fido-ui/checkbox'
+
+function getFieldError(field: any) {
+  if (!field.state.meta.isTouched || field.state.meta.isValid) return undefined
+  return field.state.meta.errors.map((e: any) => typeof e === 'string' ? e : String(e)).join(', ')
+}
+
+export function TextField({ label, ...props }: { label: string } & Record<string, any>) {
+  const field = useFieldContext<string>()
+  return (
+    <Field label={label} error={getFieldError(field)} {...props}>
+      <Input
+        name={field.name}
+        value={field.state.value}
+        onChange={(e) => field.handleChange(e.target.value)}
+        onBlur={field.handleBlur}
+      />
+    </Field>
+  )
+}
+
+export function TextareaField({ label, ...props }: { label: string } & Record<string, any>) {
+  const field = useFieldContext<string>()
+  return (
+    <Textarea
+      label={label}
+      name={field.name}
+      value={field.state.value}
+      onChange={(e) => field.handleChange(e.target.value)}
+      onBlur={field.handleBlur}
+      error={getFieldError(field)}
+      {...props}
+    />
+  )
+}
+
+export function SelectField({ label, children, ...props }: { label: string; children: React.ReactNode } & Record<string, any>) {
+  const field = useFieldContext<string>()
+  return (
+    <Select
+      label={label}
+      name={field.name}
+      value={field.state.value}
+      onValueChange={(v) => field.handleChange(v ?? '')}
+      error={getFieldError(field)}
+      {...props}
+    >
+      {children}
+    </Select>
+  )
+}
+
+export function CheckboxField({ label, ...props }: { label: string } & Record<string, any>) {
+  const field = useFieldContext<boolean>()
+  return (
+    <Checkbox
+      label={label}
+      name={field.name}
+      checked={field.state.value}
+      onCheckedChange={(checked) => field.handleChange(!!checked)}
+      error={getFieldError(field)}
+      {...props}
+    />
+  )
+}
+```
+
+### 3. Use in your forms — zero wiring
+
+```tsx
+import { useAppForm } from '@/lib/form'
+import { SelectItem } from '@petscreeninginc/fido-ui/select'
+import { z } from 'zod'
+
+const schema = z.object({
+  name: z.string().min(2),
+  email: z.string().email(),
+  country: z.string().min(1, 'Required'),
+  terms: z.literal(true, { errorMap: () => ({ message: 'Required' }) }),
+})
+
+function RegistrationForm() {
+  const form = useAppForm({
+    defaultValues: { name: '', email: '', country: '', terms: false as boolean },
+    onSubmit: async ({ value }) => console.log(value),
+  })
+
+  return (
+    <form onSubmit={(e) => { e.preventDefault(); form.handleSubmit(); }}>
+      {/* No manual value/onChange/error wiring needed! */}
+      <form.AppField name="name" validators={{ onBlur: schema.shape.name }}>
+        {(field) => <field.TextField label="Name" />}
+      </form.AppField>
+
+      <form.AppField name="email" validators={{ onBlur: schema.shape.email }}>
+        {(field) => <field.TextField label="Email" />}
+      </form.AppField>
+
+      <form.AppField name="country" validators={{ onBlur: schema.shape.country }}>
+        {(field) => (
+          <field.SelectField label="Country">
+            <SelectItem value="us">United States</SelectItem>
+            <SelectItem value="ca">Canada</SelectItem>
+          </field.SelectField>
+        )}
+      </form.AppField>
+
+      <form.AppField name="terms" validators={{ onBlur: schema.shape.terms }}>
+        {(field) => <field.CheckboxField label="I accept the terms" />}
+      </form.AppField>
+
+      <form.Subscribe selector={(state) => [state.canSubmit, state.isSubmitting]}>
+        {([canSubmit, isSubmitting]) => (
+          <Button color="primary" shade="dark" type="submit" disabled={!canSubmit || isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Submit'}
+          </Button>
+        )}
+      </form.Subscribe>
+    </form>
+  )
+}
+```
+
+This pattern gives you **type-safe forms with zero per-field boilerplate** while keeping FidoUI library-agnostic. Each team sets it up once in their app.

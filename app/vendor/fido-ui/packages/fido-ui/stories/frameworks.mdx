@@ -1,0 +1,105 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started/Framework Setup" />
+
+# Framework Setup Guides
+
+## Next.js (App Router)
+
+```css
+/* app/globals.css */
+@import "tailwindcss";
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@source "../node_modules/@petscreeninginc/fido-ui/dist";
+```
+
+```tsx
+// app/page.tsx — Server Component (FidoUI uses 'use client' internally)
+import { Button } from '@petscreeninginc/fido-ui/button';
+
+export default function Page() {
+  return <Button color="primary" shade="dark">Click me</Button>;
+}
+```
+
+No `next.config.js` changes needed.
+
+## Next.js (Pages Router)
+
+Same CSS setup as App Router. Components work in both `pages/` and `components/` directories.
+
+## Vite + TanStack Router
+
+```css
+/* src/index.css */
+@import "tailwindcss";
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@source "../node_modules/@petscreeninginc/fido-ui/dist";
+```
+
+```ts
+// vite.config.ts
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});
+```
+
+## Rails (Tailwind v4)
+
+```css
+/* app/assets/stylesheets/application.css */
+@import "tailwindcss";
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@source "../node_modules/@petscreeninginc/fido-ui/dist";
+```
+
+## Rails (Tailwind v3)
+
+```js
+// tailwind.config.js
+const fidoUITheme = require('@petscreeninginc/fido-ui/tokens/v3');
+
+module.exports = {
+  content: [
+    './app/views/**/*.{html,erb}',
+    './app/javascript/**/*.{ts,tsx}',
+    './node_modules/@petscreeninginc/fido-ui/dist/**/*.{js,cjs}',
+  ],
+  theme: {
+    extend: fidoUITheme,
+  },
+};
+```
+
+## Font Setup
+
+FidoUI uses the **Archivo** font family. Load it in your app:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+```
+
+Or self-host the variable font files (available from Google Fonts).
+
+## Troubleshooting
+
+### Styles are missing
+
+Tailwind isn't scanning the FidoUI package. Add the `@source` directive (v4) or `content` entry (v3).
+
+### "use client" errors in Next.js
+
+Import from per-component paths:
+
+```tsx
+// Correct
+import { Button } from '@petscreeninginc/fido-ui/button';
+```
+
+### TypeScript can't find module
+
+Ensure `moduleResolution` is `"bundler"` or `"node16"` in `tsconfig.json`.

@@ -1,0 +1,15 @@
+export { StarIcon } from './star';
+export { StarBoldIcon } from './star-bold';
+export { FireIcon } from './fire';
+export { FireBoldIcon } from './fire-bold';
+export { SparklessIcon } from './sparkless';
+export { SparklessBoldIcon } from './sparkless-bold';
+export { LightningIcon } from './lightning';
+export { LightningBoldIcon } from './lightning-bold';
+export { FlashIcon } from './flash';
+export { FlashBoldIcon } from './flash-bold';
+export { MoonIcon } from './moon';
+export { MoonBoldIcon } from './moon-bold';
+export { SunIcon } from './sun';
+export { SunBoldIcon } from './sun-bold';
+export { RocketIcon } from './rocket';

@@ -1,0 +1,87 @@
+{
+  "name": "@petscreeninginc/fido-ui-icons",
+  "version": "1.0.1",
+  "description": "Tree-shakeable React icons for the FidoUI design system",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetScreeningInc/fido-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://petscreening-503561434282.d.codeartifact.us-east-2.amazonaws.com/npm/petscreening-repo/"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./pets": {
+      "import": {
+        "types": "./dist/pets/index.d.ts",
+        "default": "./dist/esm/pets/index.js"
+      },
+      "require": {
+        "types": "./dist/pets/index.d.cts",
+        "default": "./dist/cjs/pets/index.cjs"
+      }
+    },
+    "./pets/*": {
+      "import": {
+        "types": "./dist/pets/*.d.ts",
+        "default": "./dist/esm/pets/*.js"
+      },
+      "require": {
+        "types": "./dist/pets/*.d.cts",
+        "default": "./dist/cjs/pets/*.cjs"
+      }
+    },
+    "./catalog": {
+      "import": {
+        "types": "./dist/catalog.d.ts",
+        "default": "./dist/esm/catalog.js"
+      },
+      "require": {
+        "types": "./dist/catalog.d.cts",
+        "default": "./dist/cjs/catalog.cjs"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/esm/*.js"
+      },
+      "require": {
+        "types": "./dist/*.d.cts",
+        "default": "./dist/cjs/*.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-icons.mjs",
+    "generate:check": "node scripts/generate-icons.mjs --check",
+    "build": "pnpm generate:check && tsup",
+    "test": "pnpm generate:check && vitest run",
+    "lint": "eslint src/ --max-warnings=50",
+    "format": "prettier --write src/ scripts/",
+    "prepublishOnly": "pnpm build",
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}

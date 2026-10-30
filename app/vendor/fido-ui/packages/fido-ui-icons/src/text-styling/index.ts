@@ -1,0 +1,12 @@
+export { BoldIcon } from './bold';
+export { ItalicBoldIcon } from './italic-bold';
+export { UnderlineBoldIcon } from './underline-bold';
+export { StrikethroughBoldIcon } from './strikethrough-bold';
+export { StackIcon } from './stack';
+export { AlignLeftIcon } from './align-left';
+export { AlignRightIcon } from './align-right';
+export { AlignCenterIcon } from './align-center';
+export { BulletsIcon } from './bullets';
+export { ListNumbersIcon } from './list-numbers';
+export { BulletPointIcon } from './bullet-point';
+export { DotIcon } from './dot';

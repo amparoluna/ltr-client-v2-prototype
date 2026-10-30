@@ -1,0 +1,11 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const MessageTypingBoldIcon = /* @__PURE__ */ createIcon(
+  'MessageTypingBoldIcon',
+  <>
+<g>
+<path fillRule="evenodd" clipRule="evenodd" d="M21.5984 6.00156V15.6016C21.5984 16.927 20.5239 18.0016 19.1984 18.0016H13.1984L7.19844 22.8016V18.0016H4.79844C3.47295 18.0016 2.39844 16.927 2.39844 15.6016V6.00156C2.39844 4.67608 3.47295 3.60156 4.79844 3.60156H19.1984C20.5239 3.60156 21.5984 4.67608 21.5984 6.00156ZM8.39844 9.60156H5.99844V12.0016H8.39844V9.60156ZM10.7984 9.60156H13.1984V12.0016H10.7984V9.60156ZM17.9984 9.60156H15.5984V12.0016H17.9984V9.60156Z" fill="currentColor"/>
+</g>
+  </>,
+);

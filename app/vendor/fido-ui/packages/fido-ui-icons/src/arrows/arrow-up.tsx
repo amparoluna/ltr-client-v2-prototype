@@ -1,0 +1,11 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const ArrowUpIcon = /* @__PURE__ */ createIcon(
+  'ArrowUpIcon',
+  <>
+<g>
+<path fillRule="evenodd" clipRule="evenodd" d="M11.2929 3.29289C11.6834 2.90237 12.3166 2.90237 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289Z" fill="currentColor"/>
+</g>
+  </>,
+);

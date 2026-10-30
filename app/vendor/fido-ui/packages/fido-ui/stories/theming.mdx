@@ -1,0 +1,82 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started/Theming" />
+
+# Theming & Customization
+
+## Product themes (Primary / FidoAlert)
+
+**Layer 1a — Product themes** swap tokens via CSS. The default `theme.css` is the **Primary** theme.
+
+- **Primary** — default tokens (spacing, Primary palettes)
+- **FidoAlert** (`fido-alert.css`) — roomier spacing plus FidoAlert brand palettes (primary red, secondary blue, etc.)
+
+Semantic colors cascade through `var()` from the updated primitives.
+
+```css
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+@import "@petscreeninginc/fido-ui/tokens/themes/fido-alert.css";
+```
+
+```html
+<html data-fido-ui-theme="fidoAlert">
+```
+
+Storybook: use the **Theme** toolbar to preview each product theme.
+
+## Overriding Component Styles
+
+Every component accepts a `className` prop. FidoUI uses [Tailwind Merge](https://github.com/dcastil/tailwind-merge) internally, so your classes correctly override the defaults:
+
+```tsx
+<Button color="primary" shade="dark" className="bg-purple-600 hover:bg-purple-700">
+  Custom Purple
+</Button>
+
+<Badge color="success" shade="light" className="px-4 py-1">
+  Bigger Badge
+</Badge>
+```
+
+## Using Variant Functions Directly
+
+Use the variant functions for custom elements that follow the design system:
+
+```tsx
+import { buttonVariants } from '@petscreeninginc/fido-ui/button';
+
+// Style a link as a button
+<a href="/signup" className={buttonVariants({ color: 'primary', shade: 'dark' })}>
+  Sign Up
+</a>
+```
+
+## Dark Mode
+
+Override token values for dark mode using CSS class or data attribute:
+
+```css
+.dark, [data-theme="dark"] {
+  --color-fido-ui-primary-500: #6b94fc;
+  --color-fido-ui-primary-600: #4774fa;
+  --color-fido-ui-neutral-white: #0a0a0a;
+  --color-fido-ui-neutral-black: #ffffff;
+}
+```
+
+Works with Tailwind's `dark:` variant automatically.
+
+## Custom Theme
+
+Override any design token by loading your CSS after the FidoUI theme:
+
+```css
+@import "tailwindcss";
+@import "@petscreeninginc/fido-ui/tokens/theme.css";
+
+/* Your overrides */
+@theme {
+  --color-fido-ui-primary-500: #8b5cf6;
+  --radius-fido-ui-md: 12px;
+}
+```

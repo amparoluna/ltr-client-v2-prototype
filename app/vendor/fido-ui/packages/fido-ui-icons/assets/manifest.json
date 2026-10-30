@@ -1,0 +1,2188 @@
+[
+  {
+    "name": "Commerce",
+    "directory": "commerce",
+    "icons": [
+      {
+        "file": "shop.svg",
+        "component": "ShopIcon"
+      },
+      {
+        "file": "shop-bold.svg",
+        "component": "ShopBoldIcon"
+      },
+      {
+        "file": "heart.svg",
+        "component": "HeartIcon"
+      },
+      {
+        "file": "heart-bold.svg",
+        "component": "HeartBoldIcon"
+      },
+      {
+        "file": "verified.svg",
+        "component": "VerifiedIcon"
+      },
+      {
+        "file": "verified-bold.svg",
+        "component": "VerifiedBoldIcon"
+      },
+      {
+        "file": "cake.svg",
+        "component": "CakeIcon"
+      },
+      {
+        "file": "cake-bold.svg",
+        "component": "CakeBoldIcon"
+      },
+      {
+        "file": "truck.svg",
+        "component": "TruckIcon"
+      },
+      {
+        "file": "truck-bold.svg",
+        "component": "TruckBoldIcon"
+      },
+      {
+        "file": "discount.svg",
+        "component": "DiscountIcon"
+      },
+      {
+        "file": "discount-bold.svg",
+        "component": "DiscountBoldIcon"
+      },
+      {
+        "file": "ticket.svg",
+        "component": "TicketIcon"
+      },
+      {
+        "file": "ticket-bold.svg",
+        "component": "TicketBoldIcon"
+      },
+      {
+        "file": "cart.svg",
+        "component": "CartIcon"
+      },
+      {
+        "file": "cart-bold.svg",
+        "component": "CartBoldIcon"
+      },
+      {
+        "file": "click.svg",
+        "component": "ClickIcon"
+      },
+      {
+        "file": "click-bold.svg",
+        "component": "ClickBoldIcon"
+      },
+      {
+        "file": "offer.svg",
+        "component": "OfferIcon"
+      },
+      {
+        "file": "offer-bold.svg",
+        "component": "OfferBoldIcon"
+      },
+      {
+        "file": "qr-code.svg",
+        "component": "QrCodeIcon"
+      },
+      {
+        "file": "gift.svg",
+        "component": "GiftIcon"
+      },
+      {
+        "file": "gift-bold.svg",
+        "component": "GiftBoldIcon"
+      },
+      {
+        "file": "cart-add.svg",
+        "component": "CartAddIcon"
+      },
+      {
+        "file": "cart-add-bold.svg",
+        "component": "CartAddBoldIcon"
+      },
+      {
+        "file": "card-bank.svg",
+        "component": "CardBankIcon"
+      },
+      {
+        "file": "card-bank-bold.svg",
+        "component": "CardBankBoldIcon"
+      },
+      {
+        "file": "party-popper.svg",
+        "component": "PartyPopperIcon"
+      },
+      {
+        "file": "dislike.svg",
+        "component": "DislikeIcon"
+      },
+      {
+        "file": "dislike-bold.svg",
+        "component": "DislikeBoldIcon"
+      },
+      {
+        "file": "like.svg",
+        "component": "LikeIcon"
+      },
+      {
+        "file": "like-bold.svg",
+        "component": "LikeBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Pets",
+    "directory": "pets",
+    "icons": [
+      {
+        "file": "paw-print-bold.svg",
+        "component": "PawPrintBoldIcon"
+      },
+      {
+        "file": "paw-print.svg",
+        "component": "PawPrintIcon"
+      },
+      {
+        "file": "dog.svg",
+        "component": "DogIcon"
+      },
+      {
+        "file": "cat.svg",
+        "component": "CatIcon"
+      },
+      {
+        "file": "rabbit.svg",
+        "component": "RabbitIcon"
+      },
+      {
+        "file": "bird.svg",
+        "component": "BirdIcon"
+      },
+      {
+        "file": "fish.svg",
+        "component": "FishIcon"
+      },
+      {
+        "file": "rodent.svg",
+        "component": "RodentIcon"
+      },
+      {
+        "file": "reptile.svg",
+        "component": "ReptileIcon"
+      },
+      {
+        "file": "ferret.svg",
+        "component": "FerretIcon"
+      },
+      {
+        "file": "horse.svg",
+        "component": "HorseIcon"
+      },
+      {
+        "file": "clipboard.svg",
+        "component": "ClipboardIcon"
+      },
+      {
+        "file": "no-pets.svg",
+        "component": "NoPetsIcon"
+      },
+      {
+        "file": "ban.svg",
+        "component": "BanIcon"
+      },
+      {
+        "file": "home.svg",
+        "component": "HomeIcon"
+      },
+      {
+        "file": "vaccination-protection.svg",
+        "component": "VaccinationProtectionIcon"
+      },
+      {
+        "file": "cross-health.svg",
+        "component": "CrossHealthIcon"
+      },
+      {
+        "file": "stethoscope.svg",
+        "component": "StethoscopeIcon"
+      },
+      {
+        "file": "bone.svg",
+        "component": "BoneIcon"
+      },
+      {
+        "file": "pill.svg",
+        "component": "PillIcon"
+      },
+      {
+        "file": "selector.svg",
+        "component": "SelectorIcon"
+      },
+      {
+        "file": "pattern.svg",
+        "component": "PatternIcon"
+      },
+      {
+        "file": "service.svg",
+        "component": "ServiceIcon"
+      },
+      {
+        "file": "spayed.svg",
+        "component": "SpayedIcon"
+      },
+      {
+        "file": "not-spayed.svg",
+        "component": "NotSpayedIcon"
+      },
+      {
+        "file": "scissors.svg",
+        "component": "ScissorsIcon"
+      },
+      {
+        "file": "palette.svg",
+        "component": "PaletteIcon"
+      },
+      {
+        "file": "color-swatch.svg",
+        "component": "ColorSwatchIcon"
+      },
+      {
+        "file": "color-swatch-bold.svg",
+        "component": "ColorSwatchBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Files",
+    "directory": "files",
+    "icons": [
+      {
+        "file": "document-file.svg",
+        "component": "DocumentFileIcon"
+      },
+      {
+        "file": "document-file-bold.svg",
+        "component": "DocumentFileBoldIcon"
+      },
+      {
+        "file": "file-sheet.svg",
+        "component": "FileSheetIcon"
+      },
+      {
+        "file": "file-sheet-bold.svg",
+        "component": "FileSheetBoldIcon"
+      },
+      {
+        "file": "document-add.svg",
+        "component": "DocumentAddIcon"
+      },
+      {
+        "file": "document-add-bold.svg",
+        "component": "DocumentAddBoldIcon"
+      },
+      {
+        "file": "document-download.svg",
+        "component": "DocumentDownloadIcon"
+      },
+      {
+        "file": "document-download-bold.svg",
+        "component": "DocumentDownloadBoldIcon"
+      },
+      {
+        "file": "stylesheet.svg",
+        "component": "StylesheetIcon"
+      },
+      {
+        "file": "stylesheet-bold.svg",
+        "component": "StylesheetBoldIcon"
+      },
+      {
+        "file": "copy.svg",
+        "component": "CopyIcon"
+      },
+      {
+        "file": "copy-bold.svg",
+        "component": "CopyBoldIcon"
+      },
+      {
+        "file": "tasks.svg",
+        "component": "TasksIcon"
+      },
+      {
+        "file": "tasks-bold.svg",
+        "component": "TasksBoldIcon"
+      },
+      {
+        "file": "upload-cloud.svg",
+        "component": "UploadCloudIcon"
+      },
+      {
+        "file": "upload-cloud-bold.svg",
+        "component": "UploadCloudBoldIcon"
+      },
+      {
+        "file": "download-cloud.svg",
+        "component": "DownloadCloudIcon"
+      },
+      {
+        "file": "download-cloud-bold.svg",
+        "component": "DownloadCloudBoldIcon"
+      },
+      {
+        "file": "arrow-down-to-line.svg",
+        "component": "ArrowDownToLineIcon"
+      },
+      {
+        "file": "upload.svg",
+        "component": "UploadIcon"
+      },
+      {
+        "file": "download-multiple.svg",
+        "component": "DownloadMultipleIcon"
+      },
+      {
+        "file": "download-multiple-bold.svg",
+        "component": "DownloadMultipleBoldIcon"
+      },
+      {
+        "file": "document-delete.svg",
+        "component": "DocumentDeleteIcon"
+      },
+      {
+        "file": "document-delete-bold.svg",
+        "component": "DocumentDeleteBoldIcon"
+      },
+      {
+        "file": "download-alt.svg",
+        "component": "DownloadAltIcon"
+      },
+      {
+        "file": "download-alt-bold.svg",
+        "component": "DownloadAltBoldIcon"
+      },
+      {
+        "file": "file.svg",
+        "component": "FileIcon"
+      },
+      {
+        "file": "file-bold.svg",
+        "component": "FileBoldIcon"
+      },
+      {
+        "file": "folder.svg",
+        "component": "FolderIcon"
+      },
+      {
+        "file": "folder-bold.svg",
+        "component": "FolderBoldIcon"
+      },
+      {
+        "file": "download-folder.svg",
+        "component": "DownloadFolderIcon"
+      },
+      {
+        "file": "download-folder-bold.svg",
+        "component": "DownloadFolderBoldIcon"
+      },
+      {
+        "file": "add-folder.svg",
+        "component": "AddFolderIcon"
+      },
+      {
+        "file": "add-folder-bold.svg",
+        "component": "AddFolderBoldIcon"
+      },
+      {
+        "file": "archive-restore.svg",
+        "component": "ArchiveRestoreIcon"
+      },
+      {
+        "file": "archiving-bold.svg",
+        "component": "ArchivingBoldIcon"
+      },
+      {
+        "file": "archiving.svg",
+        "component": "ArchivingIcon"
+      },
+      {
+        "file": "folder-minus.svg",
+        "component": "FolderMinusIcon"
+      },
+      {
+        "file": "folder-minus-bold.svg",
+        "component": "FolderMinusBoldIcon"
+      },
+      {
+        "file": "archive-box.svg",
+        "component": "ArchiveBoxIcon"
+      },
+      {
+        "file": "archive-box-bold.svg",
+        "component": "ArchiveBoxBoldIcon"
+      },
+      {
+        "file": "gif-file.svg",
+        "component": "GIFFileIcon"
+      },
+      {
+        "file": "unknown-file.svg",
+        "component": "UnknownFileIcon"
+      },
+      {
+        "file": "png-file.svg",
+        "component": "PNGFileIcon"
+      },
+      {
+        "file": "jpg-file.svg",
+        "component": "JPGFileIcon"
+      },
+      {
+        "file": "doc-file.svg",
+        "component": "DOCFileIcon"
+      },
+      {
+        "file": "pdf-file.svg",
+        "component": "PDFFileIcon"
+      }
+    ]
+  },
+  {
+    "name": "Maps-Travel-Business",
+    "directory": "maps-travel-business",
+    "icons": [
+      {
+        "file": "fixed.svg",
+        "component": "FixedIcon"
+      },
+      {
+        "file": "fixed-bold.svg",
+        "component": "FixedBoldIcon"
+      },
+      {
+        "file": "paper-airplane.svg",
+        "component": "PaperAirplaneIcon"
+      },
+      {
+        "file": "paper-airplane-bold.svg",
+        "component": "PaperAirplaneBoldIcon"
+      },
+      {
+        "file": "world.svg",
+        "component": "WorldIcon"
+      },
+      {
+        "file": "world-bold.svg",
+        "component": "WorldBoldIcon"
+      },
+      {
+        "file": "pin.svg",
+        "component": "PinIcon"
+      },
+      {
+        "file": "pin-bold.svg",
+        "component": "PinBoldIcon"
+      },
+      {
+        "file": "map.svg",
+        "component": "MapIcon"
+      },
+      {
+        "file": "map-bold.svg",
+        "component": "MapBoldIcon"
+      },
+      {
+        "file": "single-building.svg",
+        "component": "SingleBuildingIcon"
+      },
+      {
+        "file": "single-building-bold.svg",
+        "component": "SingleBuildingBoldIcon"
+      },
+      {
+        "file": "multi-building.svg",
+        "component": "MultiBuildingIcon"
+      },
+      {
+        "file": "multi-building-bold.svg",
+        "component": "MultiBuildingBoldIcon"
+      },
+      {
+        "file": "store.svg",
+        "component": "StoreIcon"
+      },
+      {
+        "file": "store-bold.svg",
+        "component": "StoreBoldIcon"
+      },
+      {
+        "file": "landmark.svg",
+        "component": "LandmarkIcon"
+      },
+      {
+        "file": "bed-bold.svg",
+        "component": "BedBoldIcon"
+      },
+      {
+        "file": "bed.svg",
+        "component": "BedIcon"
+      },
+      {
+        "file": "open-door.svg",
+        "component": "OpenDoorIcon"
+      },
+      {
+        "file": "open-door-bold.svg",
+        "component": "OpenDoorBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Outdoors",
+    "directory": "outdoors",
+    "icons": [
+      {
+        "file": "star.svg",
+        "component": "StarIcon"
+      },
+      {
+        "file": "star-bold.svg",
+        "component": "StarBoldIcon"
+      },
+      {
+        "file": "fire.svg",
+        "component": "FireIcon"
+      },
+      {
+        "file": "fire-bold.svg",
+        "component": "FireBoldIcon"
+      },
+      {
+        "file": "sparkless.svg",
+        "component": "SparklessIcon"
+      },
+      {
+        "file": "sparkless-bold.svg",
+        "component": "SparklessBoldIcon"
+      },
+      {
+        "file": "lightning.svg",
+        "component": "LightningIcon"
+      },
+      {
+        "file": "lightning-bold.svg",
+        "component": "LightningBoldIcon"
+      },
+      {
+        "file": "flash.svg",
+        "component": "FlashIcon"
+      },
+      {
+        "file": "flash-bold.svg",
+        "component": "FlashBoldIcon"
+      },
+      {
+        "file": "moon.svg",
+        "component": "MoonIcon"
+      },
+      {
+        "file": "moon-bold.svg",
+        "component": "MoonBoldIcon"
+      },
+      {
+        "file": "sun.svg",
+        "component": "SunIcon"
+      },
+      {
+        "file": "sun-bold.svg",
+        "component": "SunBoldIcon"
+      },
+      {
+        "file": "rocket.svg",
+        "component": "RocketIcon"
+      }
+    ]
+  },
+  {
+    "name": "Communication",
+    "directory": "communication",
+    "icons": [
+      {
+        "file": "messages-chat.svg",
+        "component": "MessagesChatIcon"
+      },
+      {
+        "file": "messages-chat-bold.svg",
+        "component": "MessagesChatBoldIcon"
+      },
+      {
+        "file": "write.svg",
+        "component": "WriteIcon"
+      },
+      {
+        "file": "write-bold.svg",
+        "component": "WriteBoldIcon"
+      },
+      {
+        "file": "comment.svg",
+        "component": "CommentIcon"
+      },
+      {
+        "file": "comment-bold.svg",
+        "component": "CommentBoldIcon"
+      },
+      {
+        "file": "megaphone.svg",
+        "component": "MegaphoneIcon"
+      },
+      {
+        "file": "megaphone-bold.svg",
+        "component": "MegaphoneBoldIcon"
+      },
+      {
+        "file": "news.svg",
+        "component": "NewsIcon"
+      },
+      {
+        "file": "news-bold.svg",
+        "component": "NewsBoldIcon"
+      },
+      {
+        "file": "mail-alt.svg",
+        "component": "MailAltIcon"
+      },
+      {
+        "file": "mail-alt-bold.svg",
+        "component": "MailAltBoldIcon"
+      },
+      {
+        "file": "outgoing-call.svg",
+        "component": "OutgoingCallIcon"
+      },
+      {
+        "file": "outgoing-call-bold.svg",
+        "component": "OutgoingCallBoldIcon"
+      },
+      {
+        "file": "message-dialog.svg",
+        "component": "MessageDialogIcon"
+      },
+      {
+        "file": "message-dialog-bold.svg",
+        "component": "MessageDialogBoldIcon"
+      },
+      {
+        "file": "attached.svg",
+        "component": "AttachedIcon"
+      },
+      {
+        "file": "mail.svg",
+        "component": "MailIcon"
+      },
+      {
+        "file": "mail-bold.svg",
+        "component": "MailBoldIcon"
+      },
+      {
+        "file": "call.svg",
+        "component": "CallIcon"
+      },
+      {
+        "file": "call-bold.svg",
+        "component": "CallBoldIcon"
+      },
+      {
+        "file": "translate.svg",
+        "component": "TranslateIcon"
+      },
+      {
+        "file": "missed-call.svg",
+        "component": "MissedCallIcon"
+      },
+      {
+        "file": "missed-call-bold.svg",
+        "component": "MissedCallBoldIcon"
+      },
+      {
+        "file": "message-typing.svg",
+        "component": "MessageTypingIcon"
+      },
+      {
+        "file": "message-typing-bold.svg",
+        "component": "MessageTypingBoldIcon"
+      },
+      {
+        "file": "incoming-call.svg",
+        "component": "IncomingCallIcon"
+      },
+      {
+        "file": "incoming-call-bold.svg",
+        "component": "IncomingCallBoldIcon"
+      },
+      {
+        "file": "share.svg",
+        "component": "ShareIcon"
+      },
+      {
+        "file": "share-bold.svg",
+        "component": "ShareBoldIcon"
+      },
+      {
+        "file": "block-list.svg",
+        "component": "BlockListIcon"
+      },
+      {
+        "file": "emergency.svg",
+        "component": "EmergencyIcon"
+      },
+      {
+        "file": "web.svg",
+        "component": "WebIcon"
+      },
+      {
+        "file": "email-alert.svg",
+        "component": "EmailAlertIcon"
+      },
+      {
+        "file": "email-denied.svg",
+        "component": "EmailDeniedIcon"
+      },
+      {
+        "file": "headset.svg",
+        "component": "HeadsetIcon"
+      },
+      {
+        "file": "bell.svg",
+        "component": "BellIcon"
+      },
+      {
+        "file": "bell-bold.svg",
+        "component": "BellBoldIcon"
+      },
+      {
+        "file": "muted-bell.svg",
+        "component": "MutedBellIcon"
+      },
+      {
+        "file": "muted-bell-bold.svg",
+        "component": "MutedBellBoldIcon"
+      },
+      {
+        "file": "notification-bell.svg",
+        "component": "NotificationBellIcon"
+      },
+      {
+        "file": "notification-bell-bold.svg",
+        "component": "NotificationBellBoldIcon"
+      },
+      {
+        "file": "quote-bold.svg",
+        "component": "QuoteBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Devices",
+    "directory": "devices",
+    "icons": [
+      {
+        "file": "smartphone.svg",
+        "component": "SmartphoneIcon"
+      },
+      {
+        "file": "tablet.svg",
+        "component": "TabletIcon"
+      },
+      {
+        "file": "laptop.svg",
+        "component": "LaptopIcon"
+      },
+      {
+        "file": "computer-screen.svg",
+        "component": "ComputerScreenIcon"
+      }
+    ]
+  },
+  {
+    "name": "Media",
+    "directory": "media",
+    "icons": [
+      {
+        "file": "videogame.svg",
+        "component": "VideogameIcon"
+      },
+      {
+        "file": "videogame-bold.svg",
+        "component": "VideogameBoldIcon"
+      },
+      {
+        "file": "microphone.svg",
+        "component": "MicrophoneIcon"
+      },
+      {
+        "file": "microphone-bold.svg",
+        "component": "MicrophoneBoldIcon"
+      },
+      {
+        "file": "stop.svg",
+        "component": "StopIcon"
+      },
+      {
+        "file": "stop-bold.svg",
+        "component": "StopBoldIcon"
+      },
+      {
+        "file": "play.svg",
+        "component": "PlayIcon"
+      },
+      {
+        "file": "play-bold.svg",
+        "component": "PlayBoldIcon"
+      },
+      {
+        "file": "record.svg",
+        "component": "RecordIcon"
+      },
+      {
+        "file": "record-bold.svg",
+        "component": "RecordBoldIcon"
+      },
+      {
+        "file": "camera.svg",
+        "component": "CameraIcon"
+      },
+      {
+        "file": "camera-bold.svg",
+        "component": "CameraBoldIcon"
+      },
+      {
+        "file": "pause.svg",
+        "component": "PauseIcon"
+      },
+      {
+        "file": "pause-bold.svg",
+        "component": "PauseBoldIcon"
+      },
+      {
+        "file": "music.svg",
+        "component": "MusicIcon"
+      },
+      {
+        "file": "music-bold.svg",
+        "component": "MusicBoldIcon"
+      },
+      {
+        "file": "previous.svg",
+        "component": "PreviousIcon"
+      },
+      {
+        "file": "previous-bold.svg",
+        "component": "PreviousBoldIcon"
+      },
+      {
+        "file": "photo.svg",
+        "component": "PhotoIcon"
+      },
+      {
+        "file": "photo-bold.svg",
+        "component": "PhotoBoldIcon"
+      },
+      {
+        "file": "print.svg",
+        "component": "PrintIcon"
+      },
+      {
+        "file": "print-bold.svg",
+        "component": "PrintBoldIcon"
+      },
+      {
+        "file": "sound-off.svg",
+        "component": "SoundOffIcon"
+      },
+      {
+        "file": "sound-off-bold.svg",
+        "component": "SoundOffBoldIcon"
+      },
+      {
+        "file": "next.svg",
+        "component": "NextIcon"
+      },
+      {
+        "file": "next-bold.svg",
+        "component": "NextBoldIcon"
+      },
+      {
+        "file": "rewind.svg",
+        "component": "RewindIcon"
+      },
+      {
+        "file": "rewind-bold.svg",
+        "component": "RewindBoldIcon"
+      },
+      {
+        "file": "fast-forward.svg",
+        "component": "FastForwardIcon"
+      },
+      {
+        "file": "fast-forward-bold.svg",
+        "component": "FastForwardBoldIcon"
+      },
+      {
+        "file": "sound-on.svg",
+        "component": "SoundOnIcon"
+      },
+      {
+        "file": "sound-on-bold.svg",
+        "component": "SoundOnBoldIcon"
+      },
+      {
+        "file": "browser.svg",
+        "component": "BrowserIcon"
+      },
+      {
+        "file": "expand.svg",
+        "component": "ExpandIcon"
+      },
+      {
+        "file": "minimize2.svg",
+        "component": "Minimize2Icon"
+      },
+      {
+        "file": "movie.svg",
+        "component": "MovieIcon"
+      }
+    ]
+  },
+  {
+    "name": "Text Styling",
+    "directory": "text-styling",
+    "icons": [
+      {
+        "file": "bold.svg",
+        "component": "BoldIcon"
+      },
+      {
+        "file": "italic-bold.svg",
+        "component": "ItalicBoldIcon"
+      },
+      {
+        "file": "underline-bold.svg",
+        "component": "UnderlineBoldIcon"
+      },
+      {
+        "file": "strikethrough-bold.svg",
+        "component": "StrikethroughBoldIcon"
+      },
+      {
+        "file": "stack.svg",
+        "component": "StackIcon"
+      },
+      {
+        "file": "align-left.svg",
+        "component": "AlignLeftIcon"
+      },
+      {
+        "file": "align-right.svg",
+        "component": "AlignRightIcon"
+      },
+      {
+        "file": "align-center.svg",
+        "component": "AlignCenterIcon"
+      },
+      {
+        "file": "bullets.svg",
+        "component": "BulletsIcon"
+      },
+      {
+        "file": "list-numbers.svg",
+        "component": "ListNumbersIcon"
+      },
+      {
+        "file": "bullet-point.svg",
+        "component": "BulletPointIcon"
+      },
+      {
+        "file": "dot.svg",
+        "component": "DotIcon"
+      }
+    ]
+  },
+  {
+    "name": "Utility",
+    "directory": "utility",
+    "icons": [
+      {
+        "file": "minus-alt.svg",
+        "component": "MinusAltIcon"
+      },
+      {
+        "file": "minus-alt-bold.svg",
+        "component": "MinusAltBoldIcon"
+      },
+      {
+        "file": "hand.svg",
+        "component": "HandIcon"
+      },
+      {
+        "file": "hand-bold.svg",
+        "component": "HandBoldIcon"
+      },
+      {
+        "file": "preferences-vertical.svg",
+        "component": "PreferencesVerticalIcon"
+      },
+      {
+        "file": "preferences-horizontal.svg",
+        "component": "PreferencesHorizontalIcon"
+      },
+      {
+        "file": "add-alt.svg",
+        "component": "AddAltIcon"
+      },
+      {
+        "file": "add-alt-bold.svg",
+        "component": "AddAltBoldIcon"
+      },
+      {
+        "file": "flag.svg",
+        "component": "FlagIcon"
+      },
+      {
+        "file": "flag-bold.svg",
+        "component": "FlagBoldIcon"
+      },
+      {
+        "file": "link.svg",
+        "component": "LinkIcon"
+      },
+      {
+        "file": "unlink.svg",
+        "component": "UnlinkIcon"
+      },
+      {
+        "file": "filter.svg",
+        "component": "FilterIcon"
+      },
+      {
+        "file": "filter-bold.svg",
+        "component": "FilterBoldIcon"
+      },
+      {
+        "file": "backspace.svg",
+        "component": "BackspaceIcon"
+      },
+      {
+        "file": "backspace-bold.svg",
+        "component": "BackspaceBoldIcon"
+      },
+      {
+        "file": "bookmark.svg",
+        "component": "BookmarkIcon"
+      },
+      {
+        "file": "bookmark-bold.svg",
+        "component": "BookmarkBoldIcon"
+      },
+      {
+        "file": "info-tooltip.svg",
+        "component": "InfoTooltipIcon"
+      },
+      {
+        "file": "info-tooltip-bold.svg",
+        "component": "InfoTooltipBoldIcon"
+      },
+      {
+        "file": "share.svg",
+        "component": "ShareIcon"
+      },
+      {
+        "file": "share-bold.svg",
+        "component": "ShareBoldIcon"
+      },
+      {
+        "file": "trash.svg",
+        "component": "TrashIcon"
+      },
+      {
+        "file": "trash-bold.svg",
+        "component": "TrashBoldIcon"
+      },
+      {
+        "file": "tools-crossed.svg",
+        "component": "ToolsCrossedIcon"
+      },
+      {
+        "file": "tools-crossed-bold.svg",
+        "component": "ToolsCrossedBoldIcon"
+      },
+      {
+        "file": "dashboard.svg",
+        "component": "DashboardIcon"
+      },
+      {
+        "file": "dashboard-bold.svg",
+        "component": "DashboardBoldIcon"
+      },
+      {
+        "file": "expanded.svg",
+        "component": "ExpandedIcon"
+      },
+      {
+        "file": "hashtag.svg",
+        "component": "HashtagIcon"
+      },
+      {
+        "file": "help.svg",
+        "component": "HelpIcon"
+      },
+      {
+        "file": "help-bold.svg",
+        "component": "HelpBoldIcon"
+      },
+      {
+        "file": "clipboard-default.svg",
+        "component": "ClipboardDefaultIcon"
+      },
+      {
+        "file": "clipboard-default-bold.svg",
+        "component": "ClipboardDefaultBoldIcon"
+      },
+      {
+        "file": "grid-layout.svg",
+        "component": "GridLayoutIcon"
+      },
+      {
+        "file": "grid-layout-bold.svg",
+        "component": "GridLayoutBoldIcon"
+      },
+      {
+        "file": "clipboard-checked-bold.svg",
+        "component": "ClipboardCheckedBoldIcon"
+      },
+      {
+        "file": "clipboard-checked.svg",
+        "component": "ClipboardCheckedIcon"
+      },
+      {
+        "file": "settings.svg",
+        "component": "SettingsIcon"
+      },
+      {
+        "file": "settings-bold.svg",
+        "component": "SettingsBoldIcon"
+      },
+      {
+        "file": "tools.svg",
+        "component": "ToolsIcon"
+      },
+      {
+        "file": "tools-bold.svg",
+        "component": "ToolsBoldIcon"
+      },
+      {
+        "file": "alert.svg",
+        "component": "AlertIcon"
+      },
+      {
+        "file": "alert-bold.svg",
+        "component": "AlertBoldIcon"
+      },
+      {
+        "file": "home.svg",
+        "component": "HomeIcon"
+      },
+      {
+        "file": "home-bold.svg",
+        "component": "HomeBoldIcon"
+      },
+      {
+        "file": "vacation-home.svg",
+        "component": "VacationHomeIcon"
+      },
+      {
+        "file": "vacation-home-bold.svg",
+        "component": "VacationHomeBoldIcon"
+      },
+      {
+        "file": "paste-clipboard.svg",
+        "component": "PasteClipboardIcon"
+      },
+      {
+        "file": "paste-clipboard-bold.svg",
+        "component": "PasteClipboardBoldIcon"
+      },
+      {
+        "file": "show.svg",
+        "component": "ShowIcon"
+      },
+      {
+        "file": "show-bold.svg",
+        "component": "ShowBoldIcon"
+      },
+      {
+        "file": "hide.svg",
+        "component": "HideIcon"
+      },
+      {
+        "file": "hide-bold.svg",
+        "component": "HideBoldIcon"
+      },
+      {
+        "file": "clipboard-filled.svg",
+        "component": "ClipboardFilledIcon"
+      },
+      {
+        "file": "clipboard-filled-bold.svg",
+        "component": "ClipboardFilledBoldIcon"
+      },
+      {
+        "file": "check-alt.svg",
+        "component": "CheckAltIcon"
+      },
+      {
+        "file": "check-alt-bold.svg",
+        "component": "CheckAltBoldIcon"
+      },
+      {
+        "file": "menu-vertical.svg",
+        "component": "MenuVerticalIcon"
+      },
+      {
+        "file": "menu-horizontal.svg",
+        "component": "MenuHorizontalIcon"
+      },
+      {
+        "file": "menu.svg",
+        "component": "MenuIcon"
+      },
+      {
+        "file": "check.svg",
+        "component": "CheckIcon"
+      },
+      {
+        "file": "cross.svg",
+        "component": "CrossIcon"
+      },
+      {
+        "file": "add.svg",
+        "component": "AddIcon"
+      },
+      {
+        "file": "minus-small.svg",
+        "component": "MinusSmallIcon"
+      },
+      {
+        "file": "alert-noborder.svg",
+        "component": "AlertNoborderIcon"
+      },
+      {
+        "file": "spinner-bold.svg",
+        "component": "SpinnerBoldIcon"
+      },
+      {
+        "file": "close-alt.svg",
+        "component": "CloseAltIcon"
+      },
+      {
+        "file": "close-alt-bold.svg",
+        "component": "CloseAltBoldIcon"
+      },
+      {
+        "file": "dots-alt.svg",
+        "component": "DotsAltIcon"
+      },
+      {
+        "file": "dots-alt-bold.svg",
+        "component": "DotsAltBoldIcon"
+      },
+      {
+        "file": "denied.svg",
+        "component": "DeniedIcon"
+      },
+      {
+        "file": "widget-bold.svg",
+        "component": "WidgetBoldIcon"
+      },
+      {
+        "file": "widget.svg",
+        "component": "WidgetIcon"
+      },
+      {
+        "file": "wifi.svg",
+        "component": "WifiIcon"
+      },
+      {
+        "file": "wifi-off.svg",
+        "component": "WifiOffIcon"
+      },
+      {
+        "file": "offline.svg",
+        "component": "OfflineIcon"
+      },
+      {
+        "file": "online.svg",
+        "component": "OnlineIcon"
+      },
+      {
+        "file": "network.svg",
+        "component": "NetworkIcon"
+      },
+      {
+        "file": "edit.svg",
+        "component": "EditIcon"
+      },
+      {
+        "file": "edit-bold.svg",
+        "component": "EditBoldIcon"
+      },
+      {
+        "file": "at.svg",
+        "component": "AtIcon"
+      },
+      {
+        "file": "package.svg",
+        "component": "PackageIcon"
+      },
+      {
+        "file": "package-bold.svg",
+        "component": "PackageBoldIcon"
+      },
+      {
+        "file": "loader.svg",
+        "component": "LoaderIcon"
+      },
+      {
+        "file": "panel-left.svg",
+        "component": "PanelLeftIcon"
+      },
+      {
+        "file": "panel-left-close.svg",
+        "component": "PanelLeftCloseIcon"
+      },
+      {
+        "file": "panel-left-open.svg",
+        "component": "PanelLeftOpenIcon"
+      },
+      {
+        "file": "gallery-vertical-end.svg",
+        "component": "GalleryVerticalEndIcon"
+      }
+    ]
+  },
+  {
+    "name": "People",
+    "directory": "people",
+    "icons": [
+      {
+        "file": "user-default.svg",
+        "component": "UserDefaultIcon"
+      },
+      {
+        "file": "user-default-bold.svg",
+        "component": "UserDefaultBoldIcon"
+      },
+      {
+        "file": "users.svg",
+        "component": "UsersIcon"
+      },
+      {
+        "file": "users-bold.svg",
+        "component": "UsersBoldIcon"
+      },
+      {
+        "file": "community.svg",
+        "component": "CommunityIcon"
+      },
+      {
+        "file": "community-bold.svg",
+        "component": "CommunityBoldIcon"
+      },
+      {
+        "file": "add-people.svg",
+        "component": "AddPeopleIcon"
+      },
+      {
+        "file": "add-people-bold.svg",
+        "component": "AddPeopleBoldIcon"
+      },
+      {
+        "file": "delete-people.svg",
+        "component": "DeletePeopleIcon"
+      },
+      {
+        "file": "delete-people-bold.svg",
+        "component": "DeletePeopleBoldIcon"
+      },
+      {
+        "file": "user-alt.svg",
+        "component": "UserAltIcon"
+      },
+      {
+        "file": "user-alt-bold.svg",
+        "component": "UserAltBoldIcon"
+      },
+      {
+        "file": "credential.svg",
+        "component": "CredentialIcon"
+      },
+      {
+        "file": "credential-bold.svg",
+        "component": "CredentialBoldIcon"
+      },
+      {
+        "file": "emotion-happy.svg",
+        "component": "EmotionHappyIcon"
+      },
+      {
+        "file": "emotion-happy-bold.svg",
+        "component": "EmotionHappyBoldIcon"
+      },
+      {
+        "file": "emotion-neutral.svg",
+        "component": "EmotionNeutralIcon"
+      },
+      {
+        "file": "emotion-sad.svg",
+        "component": "EmotionSadIcon"
+      },
+      {
+        "file": "emotion-sad-bold.svg",
+        "component": "EmotionSadBoldIcon"
+      },
+      {
+        "file": "angry.svg",
+        "component": "AngryIcon"
+      }
+    ]
+  },
+  {
+    "name": "Arrows",
+    "directory": "arrows",
+    "icons": [
+      {
+        "file": "chevron-up.svg",
+        "component": "ChevronUpIcon"
+      },
+      {
+        "file": "chevron-down.svg",
+        "component": "ChevronDownIcon"
+      },
+      {
+        "file": "chevron-left.svg",
+        "component": "ChevronLeftIcon"
+      },
+      {
+        "file": "chevron-right.svg",
+        "component": "ChevronRightIcon"
+      },
+      {
+        "file": "turn-arrow-left.svg",
+        "component": "TurnArrowLeftIcon"
+      },
+      {
+        "file": "turn-arrow-right.svg",
+        "component": "TurnArrowRightIcon"
+      },
+      {
+        "file": "arrow-fill-up.svg",
+        "component": "ArrowFillUpIcon"
+      },
+      {
+        "file": "arrow-fill-up-bold.svg",
+        "component": "ArrowFillUpBoldIcon"
+      },
+      {
+        "file": "arrow-fill-down.svg",
+        "component": "ArrowFillDownIcon"
+      },
+      {
+        "file": "arrow-fill-down-bold.svg",
+        "component": "ArrowFillDownBoldIcon"
+      },
+      {
+        "file": "arrow-fill-left.svg",
+        "component": "ArrowFillLeftIcon"
+      },
+      {
+        "file": "arrow-fill-left-bold.svg",
+        "component": "ArrowFillLeftBoldIcon"
+      },
+      {
+        "file": "arrow-fill-right.svg",
+        "component": "ArrowFillRightIcon"
+      },
+      {
+        "file": "arrow-fill-right-bold.svg",
+        "component": "ArrowFillRightBoldIcon"
+      },
+      {
+        "file": "chevron-double-up.svg",
+        "component": "ChevronDoubleUpIcon"
+      },
+      {
+        "file": "chevron-double-down.svg",
+        "component": "ChevronDoubleDownIcon"
+      },
+      {
+        "file": "chevron-double-left.svg",
+        "component": "ChevronDoubleLeftIcon"
+      },
+      {
+        "file": "chevron-double-right.svg",
+        "component": "ChevronDoubleRightIcon"
+      },
+      {
+        "file": "arrow-up-left.svg",
+        "component": "ArrowUpLeftIcon"
+      },
+      {
+        "file": "arrow-up-right.svg",
+        "component": "ArrowUpRightIcon"
+      },
+      {
+        "file": "arrow-down-left.svg",
+        "component": "ArrowDownLeftIcon"
+      },
+      {
+        "file": "arrow-down-right.svg",
+        "component": "ArrowDownRightIcon"
+      },
+      {
+        "file": "return-alt.svg",
+        "component": "ReturnAltIcon"
+      },
+      {
+        "file": "return-alt-bold.svg",
+        "component": "ReturnAltBoldIcon"
+      },
+      {
+        "file": "enter.svg",
+        "component": "EnterIcon"
+      },
+      {
+        "file": "exit.svg",
+        "component": "ExitIcon"
+      },
+      {
+        "file": "arrow-up.svg",
+        "component": "ArrowUpIcon"
+      },
+      {
+        "file": "arrow-down.svg",
+        "component": "ArrowDownIcon"
+      },
+      {
+        "file": "arrow-left.svg",
+        "component": "ArrowLeftIcon"
+      },
+      {
+        "file": "arrow-right.svg",
+        "component": "ArrowRightIcon"
+      },
+      {
+        "file": "vertical-shift.svg",
+        "component": "VerticalShiftIcon"
+      },
+      {
+        "file": "horizontal-shift.svg",
+        "component": "HorizontalShiftIcon"
+      },
+      {
+        "file": "order-up.svg",
+        "component": "OrderUpIcon"
+      },
+      {
+        "file": "order-down.svg",
+        "component": "OrderDownIcon"
+      },
+      {
+        "file": "chevron-double-up-down.svg",
+        "component": "ChevronDoubleUpDownIcon"
+      },
+      {
+        "file": "chevron-double-left-right.svg",
+        "component": "ChevronDoubleLeftRightIcon"
+      },
+      {
+        "file": "change.svg",
+        "component": "ChangeIcon"
+      }
+    ]
+  },
+  {
+    "name": "Finance",
+    "directory": "finance",
+    "icons": [
+      {
+        "file": "bank.svg",
+        "component": "BankIcon"
+      },
+      {
+        "file": "bank-bold.svg",
+        "component": "BankBoldIcon"
+      },
+      {
+        "file": "balance.svg",
+        "component": "BalanceIcon"
+      },
+      {
+        "file": "bank-notes.svg",
+        "component": "BankNotesIcon"
+      },
+      {
+        "file": "bank-notes-bold.svg",
+        "component": "BankNotesBoldIcon"
+      },
+      {
+        "file": "coin.svg",
+        "component": "CoinIcon"
+      },
+      {
+        "file": "coin-bold.svg",
+        "component": "CoinBoldIcon"
+      },
+      {
+        "file": "euro.svg",
+        "component": "EuroIcon"
+      },
+      {
+        "file": "euro-bold.svg",
+        "component": "EuroBoldIcon"
+      },
+      {
+        "file": "yuan.svg",
+        "component": "YuanIcon"
+      },
+      {
+        "file": "yuan-bold.svg",
+        "component": "YuanBoldIcon"
+      },
+      {
+        "file": "billing-settings.svg",
+        "component": "BillingSettingsIcon"
+      },
+      {
+        "file": "billing-settings-bold.svg",
+        "component": "BillingSettingsBoldIcon"
+      },
+      {
+        "file": "payment-code-token-pay.svg",
+        "component": "PaymentCodeTokenPayIcon"
+      },
+      {
+        "file": "ccv.svg",
+        "component": "CCVIcon"
+      },
+      {
+        "file": "generic-card.svg",
+        "component": "GenericCardIcon"
+      },
+      {
+        "file": "plaid-logo.svg",
+        "component": "PlaidLogoIcon"
+      },
+      {
+        "file": "apple.svg",
+        "component": "AppleIcon"
+      },
+      {
+        "file": "wallet.svg",
+        "component": "WalletIcon"
+      },
+      {
+        "file": "dollar.svg",
+        "component": "DollarIcon"
+      }
+    ]
+  },
+  {
+    "name": "Development",
+    "directory": "development",
+    "icons": [
+      {
+        "file": "code.svg",
+        "component": "CodeIcon"
+      },
+      {
+        "file": "console.svg",
+        "component": "ConsoleIcon"
+      },
+      {
+        "file": "console-bold.svg",
+        "component": "ConsoleBoldIcon"
+      },
+      {
+        "file": "chip.svg",
+        "component": "ChipIcon"
+      },
+      {
+        "file": "chip-bold.svg",
+        "component": "ChipBoldIcon"
+      },
+      {
+        "file": "cloud.svg",
+        "component": "CloudIcon"
+      },
+      {
+        "file": "cloud-bold.svg",
+        "component": "CloudBoldIcon"
+      },
+      {
+        "file": "server.svg",
+        "component": "ServerIcon"
+      },
+      {
+        "file": "server-bold.svg",
+        "component": "ServerBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Security",
+    "directory": "security",
+    "icons": [
+      {
+        "file": "warning.svg",
+        "component": "WarningIcon"
+      },
+      {
+        "file": "warning-bold.svg",
+        "component": "WarningBoldIcon"
+      },
+      {
+        "file": "insecure.svg",
+        "component": "InsecureIcon"
+      },
+      {
+        "file": "insecure-bold.svg",
+        "component": "InsecureBoldIcon"
+      },
+      {
+        "file": "secure.svg",
+        "component": "SecureIcon"
+      },
+      {
+        "file": "secure-bold.svg",
+        "component": "SecureBoldIcon"
+      },
+      {
+        "file": "unlock.svg",
+        "component": "UnlockIcon"
+      },
+      {
+        "file": "unlock-bold.svg",
+        "component": "UnlockBoldIcon"
+      },
+      {
+        "file": "lock.svg",
+        "component": "LockIcon"
+      },
+      {
+        "file": "lock-bold.svg",
+        "component": "LockBoldIcon"
+      },
+      {
+        "file": "key.svg",
+        "component": "KeyIcon"
+      },
+      {
+        "file": "key-bold.svg",
+        "component": "KeyBoldIcon"
+      },
+      {
+        "file": "fingerprint.svg",
+        "component": "FingerprintIcon"
+      },
+      {
+        "file": "database.svg",
+        "component": "DatabaseIcon"
+      },
+      {
+        "file": "database-bold.svg",
+        "component": "DatabaseBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Education",
+    "directory": "education",
+    "icons": [
+      {
+        "file": "student.svg",
+        "component": "StudentIcon"
+      },
+      {
+        "file": "student-bold.svg",
+        "component": "StudentBoldIcon"
+      },
+      {
+        "file": "book.svg",
+        "component": "BookIcon"
+      },
+      {
+        "file": "book-bold.svg",
+        "component": "BookBoldIcon"
+      },
+      {
+        "file": "puzzle.svg",
+        "component": "PuzzleIcon"
+      },
+      {
+        "file": "puzzle-bold.svg",
+        "component": "PuzzleBoldIcon"
+      },
+      {
+        "file": "beaker.svg",
+        "component": "BeakerIcon"
+      },
+      {
+        "file": "beaker-bold.svg",
+        "component": "BeakerBoldIcon"
+      },
+      {
+        "file": "courses.svg",
+        "component": "CoursesIcon"
+      },
+      {
+        "file": "courses-bold.svg",
+        "component": "CoursesBoldIcon"
+      },
+      {
+        "file": "calculator.svg",
+        "component": "CalculatorIcon"
+      },
+      {
+        "file": "calculator-bold.svg",
+        "component": "CalculatorBoldIcon"
+      },
+      {
+        "file": "briefcase.svg",
+        "component": "BriefcaseIcon"
+      },
+      {
+        "file": "briefcase-bold.svg",
+        "component": "BriefcaseBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Charts",
+    "directory": "charts",
+    "icons": [
+      {
+        "file": "chart-bars.svg",
+        "component": "ChartBarsIcon"
+      },
+      {
+        "file": "chart-bars-bold.svg",
+        "component": "ChartBarsBoldIcon"
+      },
+      {
+        "file": "chart-alt.svg",
+        "component": "ChartAltIcon"
+      },
+      {
+        "file": "chart-alt-bold.svg",
+        "component": "ChartAltBoldIcon"
+      },
+      {
+        "file": "graphic-bars.svg",
+        "component": "GraphicBarsIcon"
+      },
+      {
+        "file": "graphic-bars-bold.svg",
+        "component": "GraphicBarsBoldIcon"
+      },
+      {
+        "file": "no-trend.svg",
+        "component": "NoTrendIcon"
+      },
+      {
+        "file": "trend.svg",
+        "component": "TrendIcon"
+      },
+      {
+        "file": "chart.svg",
+        "component": "ChartIcon"
+      },
+      {
+        "file": "chart-bold.svg",
+        "component": "ChartBoldIcon"
+      },
+      {
+        "file": "chart-graph.svg",
+        "component": "ChartGraphIcon"
+      },
+      {
+        "file": "chart-graph-bold.svg",
+        "component": "ChartGraphBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Time-Date",
+    "directory": "time-date",
+    "icons": [
+      {
+        "file": "calendar-bold.svg",
+        "component": "CalendarBoldIcon"
+      },
+      {
+        "file": "calendar.svg",
+        "component": "CalendarIcon"
+      },
+      {
+        "file": "calendar-check2.svg",
+        "component": "CalendarCheck2Icon"
+      },
+      {
+        "file": "calendar-check.svg",
+        "component": "CalendarCheckIcon"
+      },
+      {
+        "file": "calendar-clock.svg",
+        "component": "CalendarClockIcon"
+      },
+      {
+        "file": "clock.svg",
+        "component": "ClockIcon"
+      },
+      {
+        "file": "clock-bold.svg",
+        "component": "ClockBoldIcon"
+      },
+      {
+        "file": "appointments.svg",
+        "component": "AppointmentsIcon"
+      },
+      {
+        "file": "history.svg",
+        "component": "HistoryIcon"
+      }
+    ]
+  },
+  {
+    "name": "Measurement",
+    "directory": "measurement",
+    "icons": [
+      {
+        "file": "tape.svg",
+        "component": "TapeIcon"
+      },
+      {
+        "file": "tape-bold.svg",
+        "component": "TapeBoldIcon"
+      },
+      {
+        "file": "weight.svg",
+        "component": "WeightIcon"
+      },
+      {
+        "file": "weight-bold.svg",
+        "component": "WeightBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Search",
+    "directory": "search",
+    "icons": [
+      {
+        "file": "search.svg",
+        "component": "SearchIcon"
+      },
+      {
+        "file": "magnifier-minus.svg",
+        "component": "MagnifierMinusIcon"
+      },
+      {
+        "file": "search-plus.svg",
+        "component": "SearchPlusIcon"
+      },
+      {
+        "file": "document-search.svg",
+        "component": "DocumentSearchIcon"
+      },
+      {
+        "file": "document-search-bold.svg",
+        "component": "DocumentSearchBoldIcon"
+      }
+    ]
+  },
+  {
+    "name": "Payment Method Icon",
+    "directory": "payment-methods",
+    "icons": [
+      {
+        "file": "visa.svg",
+        "component": "VisaIcon"
+      },
+      {
+        "file": "diners-club.svg",
+        "component": "DinersClubIcon"
+      },
+      {
+        "file": "amex.svg",
+        "component": "AmexIcon"
+      },
+      {
+        "file": "discover.svg",
+        "component": "DiscoverIcon"
+      },
+      {
+        "file": "mastercard.svg",
+        "component": "MastercardIcon"
+      },
+      {
+        "file": "maestro.svg",
+        "component": "MaestroIcon"
+      },
+      {
+        "file": "stripe.svg",
+        "component": "StripeIcon"
+      },
+      {
+        "file": "pay-pal.svg",
+        "component": "PayPalIcon"
+      },
+      {
+        "file": "interac.svg",
+        "component": "InteracIcon"
+      },
+      {
+        "file": "verifone.svg",
+        "component": "VerifoneIcon"
+      },
+      {
+        "file": "google-pay.svg",
+        "component": "GooglePayIcon"
+      },
+      {
+        "file": "apple-pay.svg",
+        "component": "ApplePayIcon"
+      },
+      {
+        "file": "bitpay.svg",
+        "component": "BitpayIcon"
+      },
+      {
+        "file": "bitcoin.svg",
+        "component": "BitcoinIcon"
+      },
+      {
+        "file": "etherium.svg",
+        "component": "EtheriumIcon"
+      },
+      {
+        "file": "lightcoin.svg",
+        "component": "LightcoinIcon"
+      },
+      {
+        "file": "bitcoin-cash.svg",
+        "component": "BitcoinCashIcon"
+      },
+      {
+        "file": "yandex.svg",
+        "component": "YandexIcon"
+      },
+      {
+        "file": "qiwi.svg",
+        "component": "QiwiIcon"
+      },
+      {
+        "file": "elo.svg",
+        "component": "EloIcon"
+      },
+      {
+        "file": "shop-pay.svg",
+        "component": "ShopPayIcon"
+      },
+      {
+        "file": "amazon-pay.svg",
+        "component": "AmazonPayIcon"
+      },
+      {
+        "file": "alipay.svg",
+        "component": "AlipayIcon"
+      },
+      {
+        "file": "we-chat.svg",
+        "component": "WeChatIcon"
+      },
+      {
+        "file": "ideal.svg",
+        "component": "IdealIcon"
+      },
+      {
+        "file": "giropay.svg",
+        "component": "GiropayIcon"
+      },
+      {
+        "file": "union-pay.svg",
+        "component": "UnionPayIcon"
+      },
+      {
+        "file": "jcb.svg",
+        "component": "JCBIcon"
+      },
+      {
+        "file": "webmoney.svg",
+        "component": "WebmoneyIcon"
+      },
+      {
+        "file": "citadele.svg",
+        "component": "CitadeleIcon"
+      },
+      {
+        "file": "sofort.svg",
+        "component": "SofortIcon"
+      },
+      {
+        "file": "klarna.svg",
+        "component": "KlarnaIcon"
+      },
+      {
+        "file": "skrill.svg",
+        "component": "SkrillIcon"
+      },
+      {
+        "file": "bancontact.svg",
+        "component": "BancontactIcon"
+      },
+      {
+        "file": "sepa.svg",
+        "component": "SEPAIcon"
+      },
+      {
+        "file": "forbrugsforeningen.svg",
+        "component": "ForbrugsforeningenIcon"
+      },
+      {
+        "file": "payoneer.svg",
+        "component": "PayoneerIcon"
+      },
+      {
+        "file": "affirm.svg",
+        "component": "AffirmIcon"
+      },
+      {
+        "file": "paysafe.svg",
+        "component": "PaysafeIcon"
+      },
+      {
+        "file": "facebook-pay.svg",
+        "component": "FacebookPayIcon"
+      },
+      {
+        "file": "venmo.svg",
+        "component": "VenmoIcon"
+      },
+      {
+        "file": "poli.svg",
+        "component": "PoliIcon"
+      }
+    ]
+  }
+]

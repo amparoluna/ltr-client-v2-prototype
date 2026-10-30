@@ -1,0 +1,11 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const NoTrendIcon = /* @__PURE__ */ createIcon(
+  'NoTrendIcon',
+  <>
+<g>
+<path fillRule="evenodd" clipRule="evenodd" d="M2.29289 7.29289C2.68342 6.90237 3.31658 6.90237 3.70711 7.29289L9 12.5858L12.2929 9.29289C12.6834 8.90237 13.3166 8.90237 13.7071 9.29289L20 15.5858V10C20 9.44772 20.4477 9 21 9C21.5523 9 22 9.44772 22 10V18C22 18.5523 21.5523 19 21 19H13C12.4477 19 12 18.5523 12 18C12 17.4477 12.4477 17 13 17H18.5858L13 11.4142L9.70711 14.7071C9.31658 15.0976 8.68342 15.0976 8.29289 14.7071L2.29289 8.70711C1.90237 8.31658 1.90237 7.68342 2.29289 7.29289Z" fill="currentColor"/>
+</g>
+  </>,
+);

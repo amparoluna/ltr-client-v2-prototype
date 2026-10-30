@@ -1,0 +1,14 @@
+export { StudentIcon } from './student';
+export { StudentBoldIcon } from './student-bold';
+export { BookIcon } from './book';
+export { BookBoldIcon } from './book-bold';
+export { PuzzleIcon } from './puzzle';
+export { PuzzleBoldIcon } from './puzzle-bold';
+export { BeakerIcon } from './beaker';
+export { BeakerBoldIcon } from './beaker-bold';
+export { CoursesIcon } from './courses';
+export { CoursesBoldIcon } from './courses-bold';
+export { CalculatorIcon } from './calculator';
+export { CalculatorBoldIcon } from './calculator-bold';
+export { BriefcaseIcon } from './briefcase';
+export { BriefcaseBoldIcon } from './briefcase-bold';

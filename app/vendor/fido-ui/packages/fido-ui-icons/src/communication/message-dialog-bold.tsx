@@ -1,0 +1,11 @@
+// Generated from the FidoUI icon asset catalog. Do not edit by hand.
+import { createIcon } from '../create-icon';
+
+export const MessageDialogBoldIcon = /* @__PURE__ */ createIcon(
+  'MessageDialogBoldIcon',
+  <>
+<g>
+<path fillRule="evenodd" clipRule="evenodd" d="M21.5984 12.0016C21.5984 16.6408 17.3004 20.4016 11.9984 20.4016C10.2085 20.4016 8.53293 19.9729 7.09856 19.2265L2.39844 20.4016L4.0044 16.6543C2.9898 15.3223 2.39844 13.7224 2.39844 12.0016C2.39844 7.36237 6.6965 3.60156 11.9984 3.60156C17.3004 3.60156 21.5984 7.36237 21.5984 12.0016Z" fill="currentColor"/>
+</g>
+  </>,
+);

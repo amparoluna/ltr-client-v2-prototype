@@ -1,0 +1,69 @@
+{
+  "name": "@petscreeninginc/fido-ui-tokens",
+  "version": "0.0.0",
+  "description": "Cross-platform design tokens for FidoUI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetScreeningInc/fido-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://petscreening-503561434282.d.codeartifact.us-east-2.amazonaws.com/npm/petscreening-repo/"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css",
+    "themes/*.css"
+  ],
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./native": {
+      "import": {
+        "types": "./dist/native.d.ts",
+        "default": "./dist/esm/native.js"
+      },
+      "require": {
+        "types": "./dist/native.d.cts",
+        "default": "./dist/cjs/native.cjs"
+      }
+    },
+    "./v3": {
+      "import": {
+        "types": "./dist/fido-ui-theme-v3.generated.d.ts",
+        "default": "./dist/esm/fido-ui-theme-v3.generated.js"
+      },
+      "require": {
+        "types": "./dist/fido-ui-theme-v3.generated.d.cts",
+        "default": "./dist/cjs/fido-ui-theme-v3.generated.cjs"
+      }
+    },
+    "./theme.css": "./src/theme.css",
+    "./themes/fido-alert.css": "./src/themes/fido-alert.css"
+  },
+  "files": [
+    "dist",
+    "src/theme.css",
+    "src/themes/fido-alert.css"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-tokens.mjs",
+    "generate:check": "node scripts/generate-tokens.mjs --check",
+    "build": "pnpm generate && tsup",
+    "test": "pnpm generate:check && vitest run",
+    "lint": "tsc --noEmit",
+    "format": "prettier --write src/ scripts/",
+    "prepublishOnly": "pnpm build"
+  }
+}
