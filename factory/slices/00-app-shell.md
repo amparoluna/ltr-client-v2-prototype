@@ -49,7 +49,7 @@ Dwight Schrute, Pam Beesly, and Kevin Malone may switch users and open every pag
 
 ## Result
 
-The suite passed. Dwight, Pam, and Kevin can read the user list. `X-User-Id: samantha` and a missing header return 401. After an API restart, `GET /api/users` as Dwight still returns the three seeded users. In the browser, the app opens as Dwight Schrute, Org Admin, with no viewing banner. Each navigation page is an empty page titled with its name. Searching Impersonate user for Property Manager lists Pam Beesly and Kevin Malone and not Dwight Schrute; clearing the search lists all three. Switching to Pam or Kevin updates the sidebar and banner, and the choice stays after a reload. Exit impersonation returns to Dwight.
+The suite passed. Dwight, Pam, and Kevin can read the user list. `X-User-Id: samantha` and a missing header return 401. After an API restart, `GET /api/users` as Dwight still returns the three seeded users. In the browser, the app opens as Dwight Schrute, Org Admin, with no viewing banner. Each navigation page is an empty page titled with its name. Impersonate user marks Dwight Current. Searching for Property Manager lists Pam Beesly and Kevin Malone and not Dwight Schrute; clearing the search lists all three. Choosing Pam asks Continue as Pam Beesly? and says you'll see the portal exactly as Pam Beesly does; Back returns to the list. Switching to Pam or Kevin updates the sidebar and banner, and the choice stays after a reload. Exit impersonation returns to Dwight.
 
 ## Promote
 
