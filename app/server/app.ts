@@ -11,7 +11,7 @@ export function createApp() {
     const id = c.req.header('X-User-Id')
     const records = listUsers()
     const user = records.find((record) => record.id === id)
-    if (!can(user, 'listUsers')) return c.text('', 401)
+    if (!can(user, 'listUsers', undefined)) return c.text('', 401)
     return c.json(records)
   })
 

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { sql } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/node-sqlite'
 import { migrate } from 'drizzle-orm/node-sqlite/migrator'
+import { asRole } from '../can.ts'
 import { users } from './schema.ts'
 
 const migrationsFolder = fileURLToPath(new URL('./migrations', import.meta.url))
@@ -50,7 +51,7 @@ export function listUsers() {
     id: row.id,
     name: row.name,
     initials: row.initials,
-    role: row.role,
+    role: asRole(row.role),
     properties: JSON.parse(row.properties) as string[],
   }))
 }
