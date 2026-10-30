@@ -28,6 +28,7 @@ import { useEffect, useMemo, useState, type ComponentType } from 'react'
 import { Logo } from './Logo'
 
 const storageKey = 'ltr-user-id'
+const signedInUserId = 'dwight'
 
 type User = {
   id: string
@@ -56,6 +57,7 @@ type NavItem = {
   icon: ComponentType<{ size?: number; strokeWidth?: number }>
 }
 
+// Does names two menus. Leave the two maps until a slice asks for one nav renderer.
 const primaryNav: NavItem[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { id: 'open-items', label: 'Open items', icon: ListChecks },
@@ -92,7 +94,7 @@ function assignment(user: User) {
 }
 
 function readStoredUserId() {
-  return localStorage.getItem(storageKey) ?? 'dwight'
+  return localStorage.getItem(storageKey) ?? signedInUserId
 }
 
 export function App() {
@@ -116,8 +118,8 @@ export function App() {
         if (cancelled) return
         setUsers(records)
         if (!records.some((user) => user.id === userId)) {
-          localStorage.setItem(storageKey, 'dwight')
-          setUserId('dwight')
+          localStorage.setItem(storageKey, signedInUserId)
+          setUserId(signedInUserId)
         }
       })
     return () => {
@@ -126,12 +128,12 @@ export function App() {
   }, [userId])
 
   const selected = users.find((user) => user.id === userId)
-  const signedIn = users.find((user) => user.role === 'Org Admin')
+  const signedIn = users.find((user) => user.id === signedInUserId)
   const pending = users.find((user) => user.id === pendingId) ?? null
   const matches = useMemo(() => {
     const needle = query.trim().toLowerCase()
     if (!needle) return users
-    return users.filter((user) => `${user.name} ${assignment(user)}`.toLowerCase().includes(needle))
+    return users.filter((user) => `${user.name} ${user.role}`.toLowerCase().includes(needle))
   }, [query, users])
 
   function chooseUser(id: string) {

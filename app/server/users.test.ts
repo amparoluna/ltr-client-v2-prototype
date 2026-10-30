@@ -4,6 +4,7 @@ import { join } from 'node:path'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { createApp, resetDatabase } from './app.ts'
 
+// Seams body, not seedRows, so a drifted seed fails this test.
 const seededUsers = [
   {
     id: 'dwight',

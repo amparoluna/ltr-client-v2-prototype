@@ -13,6 +13,7 @@ export function databasePath() {
   return process.env.DATABASE_PATH ?? fileURLToPath(new URL('../../data/app.sqlite', import.meta.url))
 }
 
+// Seed implements Saves. The seam test lists the API body separately.
 const seedRows = [
   { id: 'dwight', name: 'Dwight Schrute', initials: 'DS', role: 'Org Admin', properties: '[]' },
   {

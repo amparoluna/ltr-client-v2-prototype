@@ -31,11 +31,3 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-
-export function LogoMark(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 28.27 25" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path d={markPath} fill={BRAND_INK} />
-    </svg>
-  )
-}
