@@ -227,10 +227,12 @@ export function App() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span className="user-avatar">{selected?.initials ?? 'DS'}</span>
+            <span className="user-avatar">
+              {selected?.initials ?? (userId === signedInUserId ? 'DS' : '')}
+            </span>
             <span className="user-copy">
-              <strong>{selected?.name ?? 'Dwight Schrute'}</strong>
-              <small>{selected ? assignment(selected) : 'Org Admin'}</small>
+              <strong>{selected?.name ?? (userId === signedInUserId ? 'Dwight Schrute' : '')}</strong>
+              <small>{selected ? assignment(selected) : userId === signedInUserId ? 'Org Admin' : ''}</small>
             </span>
           </button>
         </div>
